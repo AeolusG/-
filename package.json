@@ -1,0 +1,26 @@
+{
+  "name": "krayt-layout-test-task",
+  "version": "1.0.0",
+  "description": "Макет доступен по ссылке: https://vk.cc/clg1QO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AeolusG/Krayt-layout-test-task.git"
+  },
+  "author": "Olga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AeolusG/Krayt-layout-test-task/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/AeolusG/Krayt-layout-test-task#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0"
+  }
+}
