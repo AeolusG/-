@@ -122,6 +122,8 @@
   background-color: $bgColor;
   background-image: url('../images/Union.png');
   background-repeat: no-repeat;
+  background-position-y: bottom;
+  margin-bottom: 120px;
 
   .carousel-offer {
     color: $primary;
@@ -152,6 +154,206 @@
   }
   .carousel-points {
     text-align: center;
+  }
+  .carousel-arrow-center {
+    display: flex;
+    justify-content: center;
+  }
+}
+.popular {
+  .popular-subtitle {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: $primary;
+    margin-bottom: 40px;
+  }
+  margin-bottom: 120px;
+  .popular-cards {
+    gap: 20px;
+  }
+  .popular-card {
+    background-color: $bgColor;
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px 25px;
+  }
+  .popular-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: $primary;
+    background-color: $bgColor;
+    width: 200px;
+    height: 59px;
+    padding: 10px 25px;
+  }
+}
+.sale {
+  margin-bottom: 120px;
+  .sale-subtitle {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: $primary;
+    margin-bottom: 25px;
+  }
+  .sale-buttons {
+    margin-bottom: 35px;
+  }
+  .sale-btn {
+    border-radius: 21px;
+    padding: 13px 30px;
+    background-color: $bgColor;
+    color: $primary;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    box-shadow: none;
+  }
+  .sale-card-img {
+    padding-top: 40px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .active {
+    transition: none;
+    background-color: $primary;
+    color: $white;
+  }
+  .sale-arrows {
+    padding: 0;
+    text-align: end;
+
+    img {
+      gap: 8px;
+    }
+  }
+  .sale-cards {
+    gap: 20px;
+  }
+  .sale-card {
+    width: 310px;
+    border: 1px solid #f0f0f0;
+    padding: 0;
+  }
+  .sale-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $primary;
+
+    padding-bottom: 26px;
+    margin: 0;
+  }
+  .sale-price {
+    margin-bottom: 16px;
+    align-items: end;
+  }
+  .sale-discount {
+    background-color: #e24b33;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    color: #ffffff;
+    padding: 4px 8px;
+  }
+  .sale-element {
+    background-color: #5b8a8f;
+    border-radius: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    color: #ffffff;
+    padding: 4px 8px;
+    margin-top: 16px;
+    margin-left: 24px;
+    display: inline-block;
+    margin-right: 205px;
+  }
+  .sale-element-heart {
+    display: flex;
+    justify-content: end;
+
+    img {
+      padding-top: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  .sale-element-eye {
+    display: block;
+    position: absolute;
+  }
+  .sale-prevPrice {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration-line: line-through;
+    color: #8f8f8f;
+    padding: 0;
+  }
+  .sale-newPrice {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: $primary;
+  }
+  .sale-points {
+    margin-top: -10px;
+    text-align: center;
+    margin-bottom: 32px;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+}
+.discount {
+  margin-bottom: 120px;
+  .discounts-cards {
+    justify-content: space-between;
+  }
+  .discount-card {
+    background-color: $bgColor;
+    background-image: url('../images/Union2.png');
+    background-repeat: no-repeat;
+    width: calc(100% / 3 - 15px);
+  }
+  .discount-card-overflow {
+    overflow: hidden;
+    align-items: center;
+  }
+  .discount-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $primary;
   }
 }
 

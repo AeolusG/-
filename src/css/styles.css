@@ -117,6 +117,8 @@
   background-color: #f8f8f8;
   background-image: url("../images/Union.png");
   background-repeat: no-repeat;
+  background-position-y: bottom;
+  margin-bottom: 120px;
 }
 .carousel .carousel-offer {
   color: #303030;
@@ -147,6 +149,204 @@
 }
 .carousel .carousel-points {
   text-align: center;
+}
+.carousel .carousel-arrow-center {
+  display: flex;
+  justify-content: center;
+}
+
+.popular {
+  margin-bottom: 120px;
+}
+.popular .popular-subtitle {
+  font-family: "Prata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: #303030;
+  margin-bottom: 40px;
+}
+.popular .popular-cards {
+  gap: 20px;
+}
+.popular .popular-card {
+  background-color: #f8f8f8;
+  width: 200px;
+  height: 200px;
+  border: none;
+  border-radius: 0px;
+  padding: 0px 25px;
+}
+.popular .popular-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #303030;
+  background-color: #f8f8f8;
+  width: 200px;
+  height: 59px;
+  padding: 10px 25px;
+}
+
+.sale {
+  margin-bottom: 120px;
+}
+.sale .sale-subtitle {
+  font-family: "Prata";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: #303030;
+  margin-bottom: 25px;
+}
+.sale .sale-buttons {
+  margin-bottom: 35px;
+}
+.sale .sale-btn {
+  border-radius: 21px;
+  padding: 13px 30px;
+  background-color: #f8f8f8;
+  color: #303030;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  box-shadow: none;
+}
+.sale .sale-card-img {
+  padding-top: 40px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+.sale .active {
+  transition: none;
+  background-color: #303030;
+  color: #ffffff;
+}
+.sale .sale-arrows {
+  padding: 0;
+  text-align: end;
+}
+.sale .sale-arrows img {
+  gap: 8px;
+}
+.sale .sale-cards {
+  gap: 20px;
+}
+.sale .sale-card {
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  padding: 0;
+}
+.sale .sale-description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #303030;
+  padding-bottom: 26px;
+  margin: 0;
+}
+.sale .sale-price {
+  margin-bottom: 16px;
+  align-items: end;
+}
+.sale .sale-discount {
+  background-color: #e24b33;
+  border-radius: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px;
+}
+.sale .sale-element {
+  background-color: #5b8a8f;
+  border-radius: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px;
+  margin-top: 16px;
+  margin-left: 24px;
+  display: inline-block;
+  margin-right: 205px;
+}
+.sale .sale-element-heart {
+  display: flex;
+  justify-content: end;
+}
+.sale .sale-element-heart img {
+  padding-top: 16px;
+  padding-right: 16px;
+}
+.sale .sale-element-eye {
+  display: block;
+  position: absolute;
+}
+.sale .sale-prevPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-decoration-line: line-through;
+  color: #8f8f8f;
+  padding: 0;
+}
+.sale .sale-newPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  color: #303030;
+}
+.sale .sale-points {
+  margin-top: -10px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.sale .sale-points img {
+  margin-right: 8px;
+}
+
+.discount {
+  margin-bottom: 120px;
+}
+.discount .discounts-cards {
+  justify-content: space-between;
+}
+.discount .discount-card {
+  background-color: #f8f8f8;
+  background-image: url("../images/Union2.png");
+  background-repeat: no-repeat;
+  width: calc(33.3333333333% - 15px);
+}
+.discount .discount-card-overflow {
+  overflow: hidden;
+  align-items: center;
+}
+.discount .discount-description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #303030;
 }
 
 @media (max-width: 768px) {
