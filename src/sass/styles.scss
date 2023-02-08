@@ -9,7 +9,17 @@
   margin: auto;
   padding-top: 24px;
 }
-
+.subtitle {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  color: $primary;
+}
+.subtitle-daily {
+  margin-bottom: 40px;
+}
 .header {
   font-family: 'Inter';
   font-style: normal;
@@ -33,7 +43,7 @@
       color: $primary;
     }
     a:hover {
-      color: $gold;
+      opacity: 0.5;
       transition: 0.5s;
     }
   }
@@ -196,6 +206,30 @@
     padding: 10px 25px;
   }
 }
+.arrows {
+  padding: 0;
+  text-align: end;
+}
+.icon {
+  border-radius: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px;
+  display: inline-block;
+}
+.icon-green {
+  background-color: $green;
+}
+.icon-gold {
+  background-color: $gold;
+}
+.icon-black {
+  background-color: #495159;
+}
 .sale {
   margin-bottom: 120px;
   .sale-subtitle {
@@ -232,105 +266,90 @@
     background-color: $primary;
     color: $white;
   }
-  .sale-arrows {
-    padding: 0;
-    text-align: end;
+}
+.sale-cards {
+  gap: 20px;
+}
+.sale-card {
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  padding: 0;
+}
+.sale-description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: $primary;
 
-    img {
-      gap: 8px;
-    }
-  }
-  .sale-cards {
-    gap: 20px;
-  }
-  .sale-card {
-    width: 310px;
-    border: 1px solid #f0f0f0;
-    padding: 0;
-  }
-  .sale-description {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 160%;
-    color: $primary;
+  padding-bottom: 26px;
+  margin: 0;
+}
+.sale-price {
+  margin-bottom: 16px;
+  align-items: end;
+}
 
-    padding-bottom: 26px;
-    margin: 0;
-  }
-  .sale-price {
-    margin-bottom: 16px;
-    align-items: end;
-  }
-  .sale-discount {
-    background-color: #e24b33;
-    border-radius: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 100%;
-    color: #ffffff;
-    padding: 4px 8px;
-  }
-  .sale-element {
-    background-color: #5b8a8f;
-    border-radius: 15px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 100%;
-    color: #ffffff;
-    padding: 4px 8px;
-    margin-top: 16px;
-    margin-left: 24px;
-    display: inline-block;
-    margin-right: 205px;
-  }
-  .sale-element-heart {
-    display: flex;
-    justify-content: end;
+.sale-element-position {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 205px;
+}
+.sale-element-heart {
+  display: flex;
+  justify-content: end;
 
-    img {
-      padding-top: 16px;
-      padding-right: 16px;
-    }
-  }
-
-  .sale-element-eye {
-    display: block;
-    position: absolute;
-  }
-  .sale-prevPrice {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    text-decoration-line: line-through;
-    color: #8f8f8f;
-    padding: 0;
-  }
-  .sale-newPrice {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 100%;
-    color: $primary;
-  }
-  .sale-points {
-    margin-top: -10px;
-    text-align: center;
-    margin-bottom: 32px;
-
-    img {
-      margin-right: 8px;
-    }
+  img {
+    padding-top: 16px;
+    padding-right: 16px;
   }
 }
+
+.sale-element-eye {
+  display: block;
+  position: absolute;
+}
+
+.sale-points {
+  margin-top: -10px;
+  text-align: center;
+  margin-bottom: 32px;
+
+  img {
+    margin-right: 8px;
+  }
+}
+.prevPrice {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-decoration-line: line-through;
+  color: #8f8f8f;
+  padding: 0;
+}
+.newPrice {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  color: $primary;
+}
+.discountRing {
+  background-color: #e24b33;
+  border-radius: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px !important;
+}
+
 .discount {
   margin-bottom: 120px;
   .discounts-cards {
@@ -338,15 +357,38 @@
   }
   .discount-card {
     background-color: $bgColor;
-    background-image: url('../images/Union2.png');
+    background-position-y: bottom;
+    background-image: url('../images/Union3.png');
     background-repeat: no-repeat;
     width: calc(100% / 3 - 15px);
+    padding: 0;
   }
   .discount-card-overflow {
     overflow: hidden;
     align-items: center;
   }
-  .discount-description {
+  .discount-card-ring {
+    background-image: url('../images/gold.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-bracelet {
+    background-image: url('../images/silver.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-emerald {
+    background-image: url('../images/green.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-description {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -354,9 +396,291 @@
     line-height: 160%;
     text-transform: uppercase;
     color: $primary;
+    padding-top: 72px;
+    padding-left: 27px;
+    padding-bottom: 22px;
+  }
+  .discount-card-percentage {
+    color: $white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 160%;
+    padding: 0 26px;
+    max-width: fit-content;
+    margin-bottom: 48px;
+    .discount-card-small {
+      font-size: 24px;
+    }
+  }
+  .discount-card-percentage-gold {
+    background-color: $gold;
+  }
+  .discount-card-percentage-red {
+    background-color: $red;
+  }
+  .discount-card-percentage-green {
+    background-color: $green;
   }
 }
+.daily {
+  .daily-icons {
+    gap: 4px;
+    padding-left: 16px;
+    position: absolute;
+    padding-top: 16px;
+  }
+  .daily-icon {
+    max-width: fit-content;
+  }
+  .daily-product {
+    margin-right: 50px;
+  }
+  .daily-subtitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .daily-product-description {
+    width: calc(100% / 2 - 50px);
+  }
+  .daily-star-padding {
+    padding-right: 10px;
+  }
+  .daily-rate {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #303030;
+  }
+  .daily-stars {
+    margin-bottom: 24px;
+  }
+  .daily-vendor {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    margin-bottom: 36px;
+    color: #8f8f8f;
+  }
+  .daily-price {
+    gap: 16px;
+    align-items: end;
+    padding-left: 12px;
+  }
 
+  .daily-price-element {
+    max-width: fit-content;
+    padding: 0%;
+  }
+  .daily-time {
+    background-color: #f8f8f8;
+    padding: 14px 12px;
+    justify-content: center;
+    align-items: center;
+    span {
+      max-width: fit-content;
+    }
+  }
+  .daily-time-hours {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 100%;
+    text-align: center;
+    color: #303030;
+    background-color: $white;
+    border: 1px solid #d0d0d0;
+    max-width: fit-content;
+
+    .daily-time-hours-digit {
+      font-weight: 700;
+      font-size: 16px;
+      padding-top: 6px;
+    }
+  }
+  .daily-border {
+    border-top: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+  }
+  .daily-feature {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #303030;
+    padding: 0;
+    max-width: fit-content;
+  }
+  .daily-feature-margin {
+    margin-bottom: 16px;
+  }
+  .daily-measures {
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .daily-measure {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #dadada;
+    background: none;
+  }
+  .daily-measure:hover {
+    border: 1px solid $primary;
+  }
+  .daily-measure-active {
+    background-color: $primary;
+    color: $white;
+  }
+  .daily-measure-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .daily-size {
+    gap: 8px;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+  .daily-feature-bg {
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    max-width: fit-content;
+    padding: 3px 6px;
+    text-align: center;
+  }
+  .daily-color-buttons {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .daily-color-btn-border {
+    border: 1px solid #dadada;
+    padding: 4px;
+    max-width: fit-content;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .daily-color-btn-border:hover {
+    border: 1px solid $primary;
+    transition: 0.2s;
+  }
+  .daily-color-btn {
+    outline: none;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 12px;
+    max-width: fit-content;
+    border: none;
+  }
+  .active {
+    border: 1px solid $primary;
+  }
+  .daily-color-btn-grey {
+    background-color: #d9d9d9;
+  }
+  .daily-color-btn-gold {
+    background-color: #f1cb7e;
+  }
+  .daily-color-btn-orange {
+    background-color: #ea8c48;
+  }
+  .daily-color-btn-lightGreen {
+    background-color: #a7e492;
+  }
+  .daily-purchase-btns {
+    margin-bottom: 130px;
+  }
+  .daily-purchase-btn {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    outline: none;
+    border: 1px solid $primary;
+    color: $primary;
+    background-color: $white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .daily-purchase-items {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #303030;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    img {
+      max-width: fit-content;
+    }
+  }
+  .daily-purchase-margin {
+    margin-right: 40px;
+  }
+  .daily-purchase-btn-active {
+    background-color: $primary;
+    color: $white;
+  }
+  .daily-purchase-btn:first-child {
+    margin-bottom: 10px;
+  }
+}
+.article {
+  margin-bottom: 40px;
+}
+.articles {
+  margin-bottom: 120px;
+}
+.article-read {
+  display: inline;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #303030;
+  margin-right: 10px;
+}
+.article-date {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #8f8f8f;
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+.article-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #303030;
+  margin: 0;
+}
 @media (max-width: $breakpoint768) {
   .header {
     display: block;
