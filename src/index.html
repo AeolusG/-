@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
     <title>Krayt layout-test-task</title>
   </head>
   <body>
@@ -18,13 +26,59 @@
       <header>
         <div class="container-fluid">
           <div class="row header">
-            <div class="col-lg-2 col-md-12">
-              <img src="./images/Vector.png" alt="point" /><span
-                >Санкт-Петербург</span
-              >
+            <div class="col-lg-2 col-md-12 hover-icon iconCity">
+              <img src="./images/gpsBlack.svg" alt="point" />
+              <div class="dropdown">
+                <a
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                >
+                  <p class="city-name">Санкт-Петербург</p>
+                  <svg
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                      stroke="#303030"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </a>
+
+                <ul
+                  class="dropdown-menu dropdown-list"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Санкт-Петербург
+                      <img class="check" src="./images/check.svg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Москва </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Нижний Новгород </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Ростов-на-Дону </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="col-lg-2 col-md-12">
-              <img src="./images/Vector (1).png" alt="phone" />8 800 785-25-35
+            <!-- ---------------- -->
+
+            <!-- --------------------- -->
+            <div class="col-lg-2 col-md-12 hover-icon navigation">
+              <img src="./images/handset.svg" alt="phone" />
+              <a href="">8 800 785-25-35</a>
             </div>
             <div class="col-lg-3 col-md-12">
               <span class="header-title"
@@ -32,67 +86,170 @@
               >
               <p class="header-subtitle">ювелирный магазин</p>
             </div>
-            <div class="col-lg-2 col-md-12">
-              <a href="#">Вход</a><img src="./images/Line 7.png" alt="line7" />
-              <a href="#">Регистрация</a>
-            </div>
-            <div class="col-lg-2 col-md-12">
-              <div>
-                <button class="header-button">
-                  <img src="./images/coolicon.png" alt="" />
-                  <p class="header-like-count">23</p>
-                </button>
+            <div class="dropdown burger-menu display">
+              <div class="navbar-search-burger">
+                <img src="./images/magnif.png" alt="" /> Поиск по сайту
               </div>
+              <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+              </a>
 
-              <img src="./images/Group 2.png" alt="" />
-              <img src="./images/Group 101.png" alt="" />
+              <ul class="dropdown-menu dropdown-list droppdown-list-card">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Каталог
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="#">Акции</a></li>
+                <li><a class="dropdown-item" href="#">Бренды</a></li>
+                <li><a class="dropdown-item" href="#">Магазины</a></li>
+                <li><a class="dropdown-item" href="#">О нас</a></li>
+                <li><a class="dropdown-item" href="#">Доставка и оплата</a></li>
+                <li><a class="dropdown-item" href="#">Статьи</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-12 navigation">
+              <a class="hover" href="#">Вход</a
+              ><img src="./images/Line 7.png" alt="line7" />
+              <a class="hover" href="#">Регистрация</a>
+            </div>
+            <div class="col-lg-2 col-md-12 header-last-column navigation">
+              <button class="header-button hover-last-icons">
+                <img src="./images/hollow.svg" alt="" />
+                <p class="header-like-count">23</p>
+              </button>
+
+              <button class="hover-last-icons header-button" href="">
+                <img src="./images/chart.svg" alt="" />
+              </button>
+              <button class="header-button hover-last-icons">
+                <img src="./images/bag.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
-        <nav>
-          <div class="container-fluid">
-            <div class="row navbar">
-              <div class="col-lg-1 navbar-catalogue">Каталог</div>
-              <div class="col-lg-1 navbar-element">Акции</div>
-              <div class="col-lg-1 navbar-element">Бренды</div>
-              <div class="col-lg-1 navbar-element">Магазины</div>
-              <div class="col-lg-1 navbar-element">О нас</div>
-              <div class="col-lg-2 navbar-element">Доставка и оплата</div>
-              <div class="col-lg-1 navbar-element">Статьи</div>
-              <div class="col-lg-2 navbar-search">
-                <img src="./images/magnif.png" alt="" /> Поиск по сайту
-              </div>
+        <!-- ---------------------------- -->
+
+        <!-- ----------------- -->
+        <nav class="container navigation">
+          <div class="row navigationbar">
+            <div class="col-lg-1 navbar-element navbar-pressed">
+              <a href="#">Каталог</a>
+            </div>
+            <div class="col-lg-1 navbar-element">
+              <a href="#">Акции</a>
+            </div>
+            <div class="col-lg-1 navbar-element"><a href="#">Бренды</a></div>
+            <div class="col-lg-1 navbar-element">
+              <a href="#">Магазины</a>
+            </div>
+            <div class="col-lg-1 navbar-element"><a href="#">О нас</a></div>
+            <div class="col-lg-2 navbar-element">
+              <a href="#">Доставка и оплата</a>
+            </div>
+            <div class="col-lg-1 navbar-element"><a href="#">Статьи</a></div>
+            <div class="col-lg-2 navbar-search">
+              <img src="./images/magnif.png" alt="" /> Поиск по сайту
             </div>
           </div>
         </nav>
       </header>
-      <section>
-        <div class="container">
-          <div class="row carousel">
-            <div class="col-lg-1 align-self-center carousel-arrow-center">
-              <img src="./images/Component 11.png" alt="" />
-            </div>
-            <div class="col-lg-5 carousel-offer align-self-center">
-              <p>Суперскидка до 60%</p>
-              <p class="carousel-offer-big carousel-offer-paddings">
-                НА БРИЛЛИАНТЫ
-              </p>
+      <section class="container">
+        <div class="row carousel">
+          <div class="col-lg-1 align-self-center carousel-arrow-center">
+            <svg
+              class="arrow-disabled"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="27"
+                cy="27"
+                r="26.5"
+                transform="matrix(-1 0 0 1 54 0)"
+                stroke="#303030"
+              />
 
-              <button class="btn carousel-btn">Подробнее</button>
-            </div>
-            <div class="col-lg-5 align-self-center">
-              <img src="./images/pngegg 1.png" alt="ring" />
-            </div>
-            <div class="col-lg-1 align-self-center carousel-arrow-center">
-              <img src="./images/Component 10.png" alt="" />
-            </div>
-            <div class="row justify-content-center">
-              <p class="col-4 carousel-points">
-                <img src="./images/Ellipse 2.png" alt="" />
-                <img src="./images/Ellipse 3.png" alt="" />
-                <img src="./images/Ellipse 3.png" alt="" />
-              </p>
-            </div>
+              <path
+                d="M18.6464 27.3536C18.4512 27.1583 18.4512 26.8417 18.6464 26.6464L21.8284 23.4645C22.0237 23.2692 22.3403 23.2692 22.5355 23.4645C22.7308 23.6597 22.7308 23.9763 22.5355 24.1716L19.7071 27L22.5355 29.8284C22.7308 30.0237 22.7308 30.3403 22.5355 30.5355C22.3403 30.7308 22.0237 30.7308 21.8284 30.5355L18.6464 27.3536ZM35 27.5L19 27.5L19 26.5L35 26.5L35 27.5Z"
+                fill="black"
+              />
+            </svg>
+            <svg
+              class="animatedArrow-right display"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
+              <path
+                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+
+          <div class="col-lg-5 carousel-offer align-self-center">
+            <p>Суперскидка до 60%</p>
+            <p class="carousel-offer-big carousel-offer-paddings">
+              НА БРИЛЛИАНТЫ
+            </p>
+
+            <button class="carousel-btn">Подробнее</button>
+          </div>
+          <div class="col-lg-5 align-self-center">
+            <img class="img" src="./images/pngegg 1.png" alt="ring" />
+          </div>
+          <button class="carousel-btn-md">Подробнее</button>
+          <div
+            class="col-lg-1 align-self-center carousel-arrow-center navigation"
+          >
+            <svg
+              class="animatedArrow-right"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
+              <path
+                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+          <div class="row justify-content-center">
+            <p class="col-4 carousel-points">
+              <img src="./images/Ellipse 2.png" alt="" />
+              <img src="./images/Ellipse 3.png" alt="" />
+              <img src="./images/Ellipse 3.png" alt="" />
+            </p>
           </div>
         </div>
       </section>
@@ -101,219 +258,660 @@
           <div class="row">
             <p class="col-lg-12 popular-subtitle">Популярные категории</p>
           </div>
-          <div class="row popular-cards">
+          <div class="row gy-lg-5 popular-cards">
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-rings align-items-center justify-content-center"
             >
-              <img src="./images/rings.png" class="" alt="" />
-              <!-- <p class="popular-subtitle">Кольца</p> -->
+              <p class="popular-title">Кольца</p>
             </div>
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-earrings align-items-center justify-content-center"
             >
-              <img src="./images/earrings.png" alt="" />
-              <!-- <p class="popular-subtitle">Серьги</p> -->
+              <p class="popular-title">Серьги</p>
             </div>
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-wed align-items-center justify-content-center"
             >
-              <img src="./images/wedding.png" alt="" />
-              <!-- <p class="popular-subtitle">Помолвочные кольца</p> -->
+              <p class="popular-title">Помолвочные кольца</p>
             </div>
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-bracelet align-items-center justify-content-center"
             >
-              <img src="./images/bracelets.png" alt="" />
-              <!-- <p class="popular-subtitle">Браслеты</p> -->
+              <p class="popular-title">Браслеты</p>
             </div>
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-neck align-items-center justify-content-center"
             >
-              <img src="./images/necklace.png" alt="" />
-              <!-- <p class="popular-subtitle">Колье и подвески</p> -->
+              <p class="popular-title">Колье и подвески</p>
             </div>
             <div
-              class="col-lg-2 card popular-card align-items-center justify-content-center"
+              class="col-lg-2 card popular-card popular-card-watch align-items-center justify-content-center"
             >
-              <img src="./images/watch.png" alt="" />
-              <!-- <p class="popular-subtitle">Часы</p> -->
+              <p class="popular-title">Часы</p>
             </div>
-          </div>
-          <div class="row popular-cards">
-            <div class="col-lg-2 popular-title">Кольца</div>
-            <div class="col-lg-2 popular-title">Серьги</div>
-            <div class="col-lg-2 popular-title">Помолвочные кольца</div>
-            <div class="col-lg-2 popular-title">Браслеты</div>
-            <div class="col-lg-2 popular-title">Колье и подвески</div>
-            <div class="col-lg-2 popular-title">Часы</div>
           </div>
         </div>
       </section>
-      <section>
-        <div class="container sale">
-          <div class="row">
-            <div class="col-lg-12 sale-subtitle">Распродажа</div>
+      <section class="container sale">
+        <div class="row">
+          <div class="col-lg-12 sale-subtitle">Распродажа</div>
+        </div>
+        <div class="row row-cols-md-1">
+          <div class="col-lg-10 sale-buttons">
+            <button
+              type="button"
+              class="sale-btn active"
+              data-bs-toggle="button"
+            >
+              Кольца
+            </button>
+            <button type="button" class="sale-btn" data-bs-toggle="button">
+              Серьги
+            </button>
+            <button type="button" class="sale-btn" data-bs-toggle="button">
+              Браслеты
+            </button>
+            <button type="button" class="sale-btn" data-bs-toggle="button">
+              Часы
+            </button>
           </div>
-          <div class="row">
-            <div class="col-lg-10 sale-buttons">
-              <button
-                type="button"
-                class="btn sale-btn active"
-                data-bs-toggle="button"
-              >
-                Кольца
-              </button>
-              <button
-                type="button"
-                class="btn sale-btn"
-                data-bs-toggle="button"
-              >
-                Серьги
-              </button>
-              <button
-                type="button"
-                class="btn sale-btn"
-                data-bs-toggle="button"
-              >
-                Браслеты
-              </button>
-              <button
-                type="button"
-                class="btn sale-btn"
-                data-bs-toggle="button"
-              >
-                Часы
-              </button>
+          <div class="col-lg-2 arrows">
+            <svg
+              class="arrow-disabled"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="27"
+                cy="27"
+                r="26.5"
+                transform="matrix(-1 0 0 1 54 0)"
+                stroke="#303030"
+              />
+              <path
+                d="M18.6464 27.3536C18.4512 27.1583 18.4512 26.8417 18.6464 26.6464L21.8284 23.4645C22.0237 23.2692 22.3403 23.2692 22.5355 23.4645C22.7308 23.6597 22.7308 23.9763 22.5355 24.1716L19.7071 27L22.5355 29.8284C22.7308 30.0237 22.7308 30.3403 22.5355 30.5355C22.3403 30.7308 22.0237 30.7308 21.8284 30.5355L18.6464 27.3536ZM35 27.5L19 27.5L19 26.5L35 26.5L35 27.5Z"
+                fill="black"
+              />
+            </svg>
+
+            <svg
+              class="animatedArrow-right"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
+              <path
+                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="row sale-cards">
+          <div class="col-lg-3 sale-card">
+            <div class="sale-element-heart">
+              <div class="icon icon-green sale-element-position">Sale</div>
+              <div class="sale-icon">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.94668e-08 5.39995C-0.000248434 3.95029 0.582385 2.5614 1.61681 1.54578C2.65124 0.530159 4.05058 -0.026895 5.5 -4.93311e-05C7.21732 -0.00916934 8.85599 0.719125 10 1.99995C11.144 0.719125 12.7827 -0.00916934 14.5 -4.93311e-05C15.9494 -0.026895 17.3488 0.530159 18.3832 1.54578C19.4176 2.5614 20.0002 3.95029 20 5.39995C20 10.756 13.621 14.8 10 18C6.387 14.773 7.94668e-08 10.76 7.94668e-08 5.39995Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.0044 1.5C11.0044 0.947715 10.5567 0.5 10.0044 0.5C9.45211 0.5 9.00439 0.947715 9.00439 1.5V3.54989C8.04476 3.64609 7.12848 3.87731 6.27405 4.20772L5.4446 3.05037C5.12289 2.60146 4.49817 2.49836 4.04927 2.82007C3.60036 3.14179 3.49726 3.76651 3.81898 4.21541L4.45792 5.10695C3.92702 5.43178 3.434 5.79271 2.98539 6.17708C1.24791 7.6658 0 9.66836 0 11.5C0 13.3316 1.24791 15.3342 2.98539 16.8229C4.76222 18.3453 7.23586 19.5 10 19.5C12.7639 19.5 15.2376 18.3462 17.0145 16.8241C18.7522 15.3355 20 13.333 20 11.5C20 9.66702 18.7522 7.66444 17.0145 6.17591C16.6848 5.89346 16.331 5.62368 15.9559 5.37161L16.6253 4.43759C16.947 3.98869 16.844 3.36398 16.3951 3.04225C15.9462 2.72053 15.3214 2.82362 14.9997 3.27252L14.1918 4.39975C13.2102 3.96793 12.1376 3.66528 11.0044 3.55075V1.5ZM10 7.5C7.79086 7.5 6 9.29086 6 11.5C6 13.7091 7.79086 15.5 10 15.5C12.2091 15.5 14 13.7091 14 11.5C14 9.29086 12.2091 7.5 10 7.5Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
+              </div>
             </div>
-            <div class="col-lg-2 arrows">
-              <img src="./images/Component 9.png" alt="" />
-              <img src="./images/Component 10.png" alt="" />
+
+            <img src="./images/ring1.png" class="sale-card-img" alt="" />
+            <div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 sale-points">
+                    <img src="./images/Ellipse 2.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
+                  </div>
+                </div>
+                <div class="row sale-price">
+                  <div class="newPrice col-5">41 000 ₽</div>
+
+                  <div class="prevPrice col-5">65 000 ₽</div>
+                  <div class="col-2 discountRing">-45%</div>
+                </div>
+
+                <div class="row sale-description">
+                  Стильное кольцо из белого золота c бриллиантами
+                </div>
+              </div>
+            </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Белое золото</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Белое золото
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Желтое золото </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Серебро </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Размер: 16</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Размер: 16
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 16,5 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 17</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="row sale-cards">
-            <div class="col-lg-3 sale-card">
-              <div class="sale-element-heart">
-                <div class="icon icon-green sale-element-position">Sale</div>
-                <div>
-                  <img src="./images/coolicongrey.png" alt="" />
-                  <img src="./images/eye.png" class="sale-element-eye" alt="" />
-                </div>
+          <div class="col-lg-3 sale-card">
+            <div class="sale-element-heart">
+              <div class="sale-icon">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.94668e-08 5.39995C-0.000248434 3.95029 0.582385 2.5614 1.61681 1.54578C2.65124 0.530159 4.05058 -0.026895 5.5 -4.93311e-05C7.21732 -0.00916934 8.85599 0.719125 10 1.99995C11.144 0.719125 12.7827 -0.00916934 14.5 -4.93311e-05C15.9494 -0.026895 17.3488 0.530159 18.3832 1.54578C19.4176 2.5614 20.0002 3.95029 20 5.39995C20 10.756 13.621 14.8 10 18C6.387 14.773 7.94668e-08 10.76 7.94668e-08 5.39995Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.0044 1.5C11.0044 0.947715 10.5567 0.5 10.0044 0.5C9.45211 0.5 9.00439 0.947715 9.00439 1.5V3.54989C8.04476 3.64609 7.12848 3.87731 6.27405 4.20772L5.4446 3.05037C5.12289 2.60146 4.49817 2.49836 4.04927 2.82007C3.60036 3.14179 3.49726 3.76651 3.81898 4.21541L4.45792 5.10695C3.92702 5.43178 3.434 5.79271 2.98539 6.17708C1.24791 7.6658 0 9.66836 0 11.5C0 13.3316 1.24791 15.3342 2.98539 16.8229C4.76222 18.3453 7.23586 19.5 10 19.5C12.7639 19.5 15.2376 18.3462 17.0145 16.8241C18.7522 15.3355 20 13.333 20 11.5C20 9.66702 18.7522 7.66444 17.0145 6.17591C16.6848 5.89346 16.331 5.62368 15.9559 5.37161L16.6253 4.43759C16.947 3.98869 16.844 3.36398 16.3951 3.04225C15.9462 2.72053 15.3214 2.82362 14.9997 3.27252L14.1918 4.39975C13.2102 3.96793 12.1376 3.66528 11.0044 3.55075V1.5ZM10 7.5C7.79086 7.5 6 9.29086 6 11.5C6 13.7091 7.79086 15.5 10 15.5C12.2091 15.5 14 13.7091 14 11.5C14 9.29086 12.2091 7.5 10 7.5Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
               </div>
+            </div>
 
-              <img src="./images/ring1.png" class="sale-card-img" alt="" />
-              <div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 sale-points">
-                      <img src="./images/Ellipse 2.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                    </div>
+            <img src="./images/ring2.png" class="sale-card-img" alt="" />
+            <div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 sale-points">
+                    <img src="./images/Ellipse 2.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
                   </div>
-                  <div class="row sale-price">
-                    <div class="newPrice col-5">41 000 ₽</div>
+                </div>
+                <div class="row sale-price">
+                  <div class="newPrice col-5">56 000 ₽</div>
+                </div>
 
-                    <div class="prevPrice col-5">65 000 ₽</div>
-                    <div class="col-2 discountRing">-45%</div>
-                  </div>
-
-                  <div class="row sale-description">
-                    Стильное кольцо из белого золота c бриллиантами
-                  </div>
+                <div class="row sale-description">
+                  Стильное кольцо из белого золота c бриллиантами
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 sale-card">
-              <div class="sale-element-heart">
-                <div>
-                  <img src="./images/coolicongrey.png" alt="" />
-                  <img src="./images/eye.png" class="sale-element-eye" alt="" />
-                </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Белое золото</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Белое золото
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Желтое золото </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Серебро </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Размер: 16</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Размер: 16
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 16,5 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 17</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 sale-card md-hidden">
+            <div class="sale-element-heart">
+              <div class="sale-icon">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.94668e-08 5.39995C-0.000248434 3.95029 0.582385 2.5614 1.61681 1.54578C2.65124 0.530159 4.05058 -0.026895 5.5 -4.93311e-05C7.21732 -0.00916934 8.85599 0.719125 10 1.99995C11.144 0.719125 12.7827 -0.00916934 14.5 -4.93311e-05C15.9494 -0.026895 17.3488 0.530159 18.3832 1.54578C19.4176 2.5614 20.0002 3.95029 20 5.39995C20 10.756 13.621 14.8 10 18C6.387 14.773 7.94668e-08 10.76 7.94668e-08 5.39995Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.0044 1.5C11.0044 0.947715 10.5567 0.5 10.0044 0.5C9.45211 0.5 9.00439 0.947715 9.00439 1.5V3.54989C8.04476 3.64609 7.12848 3.87731 6.27405 4.20772L5.4446 3.05037C5.12289 2.60146 4.49817 2.49836 4.04927 2.82007C3.60036 3.14179 3.49726 3.76651 3.81898 4.21541L4.45792 5.10695C3.92702 5.43178 3.434 5.79271 2.98539 6.17708C1.24791 7.6658 0 9.66836 0 11.5C0 13.3316 1.24791 15.3342 2.98539 16.8229C4.76222 18.3453 7.23586 19.5 10 19.5C12.7639 19.5 15.2376 18.3462 17.0145 16.8241C18.7522 15.3355 20 13.333 20 11.5C20 9.66702 18.7522 7.66444 17.0145 6.17591C16.6848 5.89346 16.331 5.62368 15.9559 5.37161L16.6253 4.43759C16.947 3.98869 16.844 3.36398 16.3951 3.04225C15.9462 2.72053 15.3214 2.82362 14.9997 3.27252L14.1918 4.39975C13.2102 3.96793 12.1376 3.66528 11.0044 3.55075V1.5ZM10 7.5C7.79086 7.5 6 9.29086 6 11.5C6 13.7091 7.79086 15.5 10 15.5C12.2091 15.5 14 13.7091 14 11.5C14 9.29086 12.2091 7.5 10 7.5Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
               </div>
+            </div>
 
-              <img src="./images/ring2.png" class="sale-card-img" alt="" />
-              <div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 sale-points">
-                      <img src="./images/Ellipse 2.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                    </div>
+            <img src="./images/ring3.png" class="sale-card-img" alt="" />
+            <div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 sale-points">
+                    <img src="./images/Ellipse 2.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
                   </div>
-                  <div class="row sale-price">
-                    <div class="sale-newPrice col-5">56 000 ₽</div>
-                  </div>
+                </div>
+                <div class="row sale-price">
+                  <div class="newPrice col-5">37 500 ₽</div>
+                </div>
 
-                  <div class="row sale-description">
-                    Стильное кольцо из белого золота c бриллиантами
-                  </div>
+                <div class="row sale-description">
+                  Стильное кольцо из белого золота c бриллиантами
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 sale-card">
-              <div class="sale-element-heart">
-                <div>
-                  <img src="./images/coolicongrey.png" alt="" />
-                  <img src="./images/eye.png" class="sale-element-eye" alt="" />
-                </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Белое золото</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Белое золото
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Желтое золото </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Серебро </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Размер: 16</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Размер: 16
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 16,5 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 17</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 sale-card md-hidden lg-hidden">
+            <div class="sale-element-heart">
+              <div class="sale-icon">
+                <svg
+                  width="20"
+                  height="18"
+                  viewBox="0 0 20 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.94668e-08 5.39995C-0.000248434 3.95029 0.582385 2.5614 1.61681 1.54578C2.65124 0.530159 4.05058 -0.026895 5.5 -4.93311e-05C7.21732 -0.00916934 8.85599 0.719125 10 1.99995C11.144 0.719125 12.7827 -0.00916934 14.5 -4.93311e-05C15.9494 -0.026895 17.3488 0.530159 18.3832 1.54578C19.4176 2.5614 20.0002 3.95029 20 5.39995C20 10.756 13.621 14.8 10 18C6.387 14.773 7.94668e-08 10.76 7.94668e-08 5.39995Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
+
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.0044 1.5C11.0044 0.947715 10.5567 0.5 10.0044 0.5C9.45211 0.5 9.00439 0.947715 9.00439 1.5V3.54989C8.04476 3.64609 7.12848 3.87731 6.27405 4.20772L5.4446 3.05037C5.12289 2.60146 4.49817 2.49836 4.04927 2.82007C3.60036 3.14179 3.49726 3.76651 3.81898 4.21541L4.45792 5.10695C3.92702 5.43178 3.434 5.79271 2.98539 6.17708C1.24791 7.6658 0 9.66836 0 11.5C0 13.3316 1.24791 15.3342 2.98539 16.8229C4.76222 18.3453 7.23586 19.5 10 19.5C12.7639 19.5 15.2376 18.3462 17.0145 16.8241C18.7522 15.3355 20 13.333 20 11.5C20 9.66702 18.7522 7.66444 17.0145 6.17591C16.6848 5.89346 16.331 5.62368 15.9559 5.37161L16.6253 4.43759C16.947 3.98869 16.844 3.36398 16.3951 3.04225C15.9462 2.72053 15.3214 2.82362 14.9997 3.27252L14.1918 4.39975C13.2102 3.96793 12.1376 3.66528 11.0044 3.55075V1.5ZM10 7.5C7.79086 7.5 6 9.29086 6 11.5C6 13.7091 7.79086 15.5 10 15.5C12.2091 15.5 14 13.7091 14 11.5C14 9.29086 12.2091 7.5 10 7.5Z"
+                    fill="#C9C9C9"
+                  />
+                </svg>
               </div>
+            </div>
 
-              <img src="./images/ring3.png" class="sale-card-img" alt="" />
-              <div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 sale-points">
-                      <img src="./images/Ellipse 2.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                    </div>
+            <img src="./images/ring4.png" class="sale-card-img" alt="" />
+            <div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 sale-points">
+                    <img src="./images/Ellipse 2.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
+                    <img src="./images/Ellipse 3.png" alt="" />
                   </div>
-                  <div class="row sale-price">
-                    <div class="sale-newPrice col-5">37 500 ₽</div>
-                  </div>
+                </div>
+                <div class="row sale-price">
+                  <div class="newPrice col-5">39 200 ₽</div>
+                </div>
 
-                  <div class="row sale-description">
-                    Стильное кольцо из белого золота c бриллиантами
-                  </div>
+                <div class="row sale-description">
+                  Стильное кольцо из белого золота c бриллиантами
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 sale-card">
-              <div class="sale-element-heart">
-                <div>
-                  <img src="./images/coolicongrey.png" alt="" />
-                  <img src="./images/eye.png" class="sale-element-eye" alt="" />
-                </div>
-              </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Белое золото</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
 
-              <img src="./images/ring4.png" class="sale-card-img" alt="" />
-              <div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 sale-points">
-                      <img src="./images/Ellipse 2.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                      <img src="./images/Ellipse 3.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="row sale-price">
-                    <div class="sale-newPrice col-5">39 200 ₽</div>
-                  </div>
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Белое золото
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Желтое золото </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Серебро </a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown select-style select-style-margin">
+              <button
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                href="#"
+                class="dropdown-list-button"
+              >
+                <p class="city-name">Размер: 16</p>
+                <svg
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                    stroke="#303030"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
 
-                  <div class="row sale-description">
-                    Стильное кольцо из белого золота c бриллиантами
-                  </div>
-                </div>
-              </div>
+              <ul
+                class="dropdown-menu dropdown-list droppdown-list-card"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Размер: 16
+                    <img class="check" src="./images/check.svg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 16,5 </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Размер: 17</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
       <section>
         <div class="container discount">
-          <div class="row discounts-cards">
-            <div class="col-4 discount-card">
+          <div class="row row-cols-md-1 discounts-cards">
+            <div class="col-lg-4 discount-card">
               <div class="discount-card-emerald">
                 <p class="discount-card-description col-7">
                   снижение цен <br />
@@ -326,7 +924,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-4 discount-card">
+            <div class="col-lg-4 discount-card">
               <div class="discount-card-bracelet">
                 <p class="discount-card-description col-7">
                   снижение цен <br />
@@ -339,7 +937,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-4 discount-card">
+            <div class="col-lg-4 discount-card">
               <div class="discount-card-ring">
                 <p class="discount-card-description col-7">
                   снижение цен <br />
@@ -355,166 +953,205 @@
           </div>
         </div>
       </section>
-      <section class="daily">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-10 subtitle subtitle-daily">Товар дня</div>
-            <div class="col-lg-2 arrows">
-              <img src="./images/Component 9.png" alt="" />
-              <img src="./images/Component 10.png" alt="" />
+      <section class="container daily">
+        <div class="row">
+          <div class="col-lg-10 subtitle subtitle-daily">Товар дня</div>
+          <div class="col-lg-2 arrows">
+            <svg
+              class="arrow-disabled"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="27"
+                cy="27"
+                r="26.5"
+                transform="matrix(-1 0 0 1 54 0)"
+                stroke="#303030"
+              />
+              <path
+                d="M18.6464 27.3536C18.4512 27.1583 18.4512 26.8417 18.6464 26.6464L21.8284 23.4645C22.0237 23.2692 22.3403 23.2692 22.5355 23.4645C22.7308 23.6597 22.7308 23.9763 22.5355 24.1716L19.7071 27L22.5355 29.8284C22.7308 30.0237 22.7308 30.3403 22.5355 30.5355C22.3403 30.7308 22.0237 30.7308 21.8284 30.5355L18.6464 27.3536ZM35 27.5L19 27.5L19 26.5L35 26.5L35 27.5Z"
+                fill="black"
+              />
+            </svg>
+
+            <svg
+              class="animatedArrow-right"
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
+              <path
+                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="row row-cols-md-1">
+          <div class="col-lg-6 daily-product">
+            <div class="row daily-icons">
+              <div class="icon icon-black daily-icon">New</div>
+              <div class="icon icon-gold daily-icon">Хит</div>
+              <div class="icon icon-green daily-icon">Sale</div>
+            </div>
+            <div class="row align-items-center">
+              <div class="col-1">
+                <img src="./images/arrowleft.png" alt="" />
+              </div>
+              <div class="col-10">
+                <img class="ring" src="./images/brilring.png" alt="" />
+              </div>
+              <div class="col-1">
+                <img src="./images/arrright.png" alt="" />
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6 daily-product">
-              <div class="row daily-icons">
-                <div class="icon icon-black daily-icon">New</div>
-                <div class="icon icon-gold daily-icon">Хит</div>
-                <div class="icon icon-green daily-icon">Sale</div>
+          <div class="col-lg-4 daily-product-description">
+            <div class="row daily-stars">
+              <div class="col-12">
+                <img class="daily-star" src="./images/Star 1.png" alt="" />
+                <img class="daily-star" src="./images/Star 1.png" alt="" />
+                <img class="daily-star" src="./images/Star 1.png" alt="" />
+                <img
+                  class="daily-star daily-star-padding"
+                  src="./images/Star 5.png"
+                  alt=""
+                />
+                <span class="daily-rate">4,2</span>
               </div>
-              <div class="row align-items-center">
-                <div class="col-1">
-                  <img src="./images/arrowleft.png" alt="" />
+            </div>
+            <div class="row">
+              <div class="col-12 subtitle daily-subtitle">
+                Кольцо из золота с бриллиантами
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 daily-vendor">Артикул: 1012076</div>
+            </div>
+            <div class="row sale-price">
+              <div class="col-6">
+                <div class="row daily-price">
+                  <div class="newPrice daily-price-element">41 000 ₽</div>
+                  <div class="prevPrice daily-price-element">22 000 ₽</div>
+                  <div class="discountRing daily-price-element">-45%</div>
                 </div>
-                <div class="col-10">
-                  <img src="./images/brilring.png" alt="" />
-                </div>
-                <div class="col-1">
-                  <img src="./images/arrright.png" alt="" />
+              </div>
+
+              <div class="col-6">
+                <div class="row daily-time">
+                  <div class="daily-time-hours">
+                    <p class="daily-time-hours-digit">12</p>
+                    часов
+                  </div>
+                  <span>:</span>
+                  <div class="daily-time-hours">
+                    <p class="daily-time-hours-digit">46</p>
+                    минут
+                  </div>
+                  <span>:</span>
+                  <div class="daily-time-hours">
+                    <p class="daily-time-hours-digit">51</p>
+                    секунд
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-4 daily-product-description">
-              <div class="row daily-stars">
-                <div class="col-12">
-                  <img class="daily-star" src="./images/Star 1.png" alt="" />
-                  <img class="daily-star" src="./images/Star 1.png" alt="" />
-                  <img class="daily-star" src="./images/Star 1.png" alt="" />
-                  <img
-                    class="daily-star daily-star-padding"
-                    src="./images/Star 5.png"
-                    alt=""
-                  />
-                  <span class="daily-rate">4,2</span>
+            <div class="row daily-border"></div>
+            <div class="row daily-feature-margin">
+              <div class="daily-feature">цвет</div>
+            </div>
+            <div class="row daily-color-buttons">
+              <div class="daily-color-btn-border">
+                <button class="daily-color-btn daily-color-btn-grey"></button>
+              </div>
+              <div class="daily-color-btn-border active">
+                <button class="daily-color-btn daily-color-btn-gold"></button>
+              </div>
+              <div class="daily-color-btn-border">
+                <button class="daily-color-btn daily-color-btn-orange"></button>
+              </div>
+              <div class="daily-color-btn-border">
+                <button
+                  class="daily-color-btn daily-color-btn-lightGreen"
+                ></button>
+              </div>
+            </div>
+            <div class="row daily-size">
+              <div class="daily-feature">Размер</div>
+              <button
+                type="button"
+                class="daily-feature daily-feature-bg"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip tooltipStyle"
+                data-bs-title="Также как существующая теория напрямую зависит от экономической целесообразности принимаемых решений."
+              >
+                ?
+              </button>
+            </div>
+            <div class="row daily-measures">
+              <button class="col-1 daily-measure daily-measure-active">
+                16,5
+              </button>
+              <button class="col-1 daily-measure">17,5</button>
+              <button class="col-1 daily-measure">18,5</button>
+              <button class="col-1 daily-measure">19</button>
+              <button class="col-1 daily-measure">19,5</button>
+              <button class="col-1 daily-measure">19,5</button>
+              <button class="col-1 daily-measure">18,5</button>
+              <button class="col-1 daily-measure">19</button>
+              <button class="col-1 daily-measure daily-measure-disabled">
+                19,5
+              </button>
+              <button class="col-1 daily-measure daily-measure-disabled">
+                19,5
+              </button>
+            </div>
+            <div class="row daily-purchase-btns">
+              <div class="col-8 daily-purchase-margin">
+                <div class="row">
+                  <button class="daily-purchase-btn">В корзину</button>
+                </div>
+                <div class="row">
+                  <button class="daily-purchase-btn daily-purchase-btn-click">
+                    Купить в 1 клик
+                  </button>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 subtitle daily-subtitle">
-                  Кольцо из золота с бриллиантами
+              <div class="col-3">
+                <div class="row daily-purchase-items">
+                  <img src="./images/coolicongrey.png" alt="" /> Сохранить
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-12 daily-vendor">Артикул: 1012076</div>
-              </div>
-              <div class="row sale-price">
-                <div class="col-6">
-                  <div class="row daily-price">
-                    <div class="newPrice daily-price-element">41 000 ₽</div>
-                    <div class="prevPrice daily-price-element">22 000 ₽</div>
-                    <div class="discountRing daily-price-element">-45%</div>
-                  </div>
+                <div class="row daily-purchase-items">
+                  <img src="./images/chartgrey23.svg" alt="" /> Сравнить
                 </div>
-
-                <div class="col-6">
-                  <div class="row daily-time">
-                    <div class="daily-time-hours">
-                      <p class="daily-time-hours-digit">12</p>
-                      часов
-                    </div>
-                    <span>:</span>
-                    <div class="daily-time-hours">
-                      <p class="daily-time-hours-digit">46</p>
-                      минут
-                    </div>
-                    <span>:</span>
-                    <div class="daily-time-hours">
-                      <p class="daily-time-hours-digit">51</p>
-                      секунд
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row daily-border"></div>
-              <div class="row daily-feature-margin">
-                <div class="daily-feature">цвет</div>
-              </div>
-              <div class="row daily-color-buttons">
-                <div class="daily-color-btn-border">
-                  <button class="daily-color-btn daily-color-btn-grey"></button>
-                </div>
-                <div class="daily-color-btn-border active">
-                  <button class="daily-color-btn daily-color-btn-gold"></button>
-                </div>
-                <div class="daily-color-btn-border">
-                  <button
-                    class="daily-color-btn daily-color-btn-orange"
-                  ></button>
-                </div>
-                <div class="daily-color-btn-border">
-                  <button
-                    class="daily-color-btn daily-color-btn-lightGreen"
-                  ></button>
-                </div>
-              </div>
-              <div class="row daily-size">
-                <div class="daily-feature">Размер</div>
-                <div class="daily-feature daily-feature-bg">?</div>
-              </div>
-              <div class="row daily-measures">
-                <button class="col-1 daily-measure daily-measure-active">
-                  16,5
-                </button>
-                <button class="col-1 daily-measure">17,5</button>
-                <button class="col-1 daily-measure">18,5</button>
-                <button class="col-1 daily-measure">19</button>
-                <button class="col-1 daily-measure">19,5</button>
-                <button class="col-1 daily-measure">19,5</button>
-                <button class="col-1 daily-measure">18,5</button>
-                <button class="col-1 daily-measure">19</button>
-                <button class="col-1 daily-measure daily-measure-disabled">
-                  19,5
-                </button>
-                <button class="col-1 daily-measure daily-measure-disabled">
-                  19,5
-                </button>
-              </div>
-              <div class="row daily-purchase-btns">
-                <div class="col-8 daily-purchase-margin">
-                  <div class="row">
-                    <button
-                      class="daily-purchase-btn daily-purchase-btn-active"
-                    >
-                      В корзину
-                    </button>
-                  </div>
-                  <div class="row">
-                    <button class="daily-purchase-btn">Купить в 1 клик</button>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="row daily-purchase-items">
-                    <img src="./images/coolicongrey.png" alt="" /> Сохранить
-                  </div>
-                  <div class="row daily-purchase-items">
-                    <img src="./images/chart.svg" alt="" /> Сравнить
-                  </div>
-                  <div class="row daily-purchase-items">
-                    <img src="./images/share.svg" alt="" /> Поделиться
-                  </div>
+                <div class="row daily-purchase-items">
+                  <img src="./images/share.svg" alt="" /> Поделиться
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="container">
-        <div class="row article">
+        <div class="row row-cols-md-1 gy-md-4 article">
           <div class="col-lg-10 subtitle">Статьи</div>
           <div class="col-lg-2 arrows">
-            <div class="article-read">Читать все</div>
-            <img src="./images/Arrow 2.svg" alt="" />
+            <div class="article-read hover">
+              Читать все
+              <img src="./images/Arrow 2.svg" alt="" />
+            </div>
           </div>
         </div>
-        <div class="row articles">
+        <div class="row row-cols-md-2 gy-md-5 articles">
           <div class="col-lg-3">
             <img
               src="./images/mathilde-langevin-f1FkoppimsA-unsplash 1.png"
@@ -535,7 +1172,7 @@
               Жемчуг: 7 малоизвестных фактов о культовом украшении
             </p>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-3 lg-hidden">
             <img src="./images/art4.png" alt="" />
             <p class="article-date">21 сентября 2021</p>
             <p class="article-title">
@@ -547,3 +1184,12 @@
     </div>
   </body>
 </html>
+
+<script>
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+</script>
