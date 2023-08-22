@@ -6,29 +6,12 @@
 
 Макет доступен по ссылке: https://vk.cc/clg1QO
 
-
-
-## ТЗ:
-
 -BootStrap
 
 -HTML5
  
 -CSS3
 
-
--препроцессоры
-
--все основные блоки должны быть выделены в тег section.
-
-
--соответствие макету и UI KIT
-
-
--Perfect Pixel
-
-
--плавностью анимации
 
 Ссылка на Surge:
 https://kraytjew.surge.sh/
