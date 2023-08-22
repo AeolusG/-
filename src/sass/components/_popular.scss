@@ -1,0 +1,56 @@
+.popular {
+  .popular-subtitle {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: $primary;
+    margin-bottom: 40px;
+  }
+  margin-bottom: 120px;
+  .popular-cards {
+    justify-content: space-between;
+  }
+  .popular-card {
+    background-color: $bgColor;
+    width: 200px;
+    height: 259px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px 25px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+  }
+  .popular-card:hover {
+    background-size: 70%;
+  }
+  .popular-card-rings {
+    background-image: url('../images/rings.png');
+  }
+  .popular-card-earrings {
+    background-image: url('../images/earrings.png');
+  }
+  .popular-card-wed {
+    background-image: url('../images/wedding.png');
+  }
+  .popular-card-bracelet {
+    background-image: url('../images/bracelets.png');
+  }
+  .popular-card-neck {
+    background-image: url('../images/necklace.png');
+  }
+  .popular-card-watch {
+    background-image: url('../images/watch.png');
+  }
+  .popular-title {
+    @include typographyPrimary;
+    font-size: 16px;
+    text-align: center;
+    background-color: #f8f8f8;
+    width: 200px;
+    padding: 10px 25px;
+    margin-top: auto;
+  }
+}

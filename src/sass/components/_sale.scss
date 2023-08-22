@@ -1,0 +1,112 @@
+.sale {
+  margin-bottom: 120px;
+  .sale-subtitle {
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+    color: $primary;
+    margin-bottom: 25px;
+  }
+  .sale-buttons {
+    margin-bottom: 35px;
+  }
+  .sale-btn {
+    border-radius: 21px;
+    padding: 13px 30px;
+    background-color: $bgColor;
+    @include typographyPrimary;
+    border: none;
+    outline: none;
+  }
+  .sale-btn:hover {
+    background-color: #dddddd;
+  }
+  .sale-btn:focus {
+    background-color: $primary;
+    color: $white;
+  }
+  .sale-card-img {
+    padding-top: 40px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .active {
+    transition: none;
+    background-color: $primary;
+    color: $white;
+  }
+
+  .sale-cards {
+    gap: 20px;
+  }
+  .sale-card {
+    width: 310px;
+    border: 1px solid #f0f0f0;
+  }
+  .sale-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: $primary;
+
+    padding-bottom: 26px;
+    margin: 0;
+  }
+}
+.sale-price {
+  align-items: end;
+  margin-bottom: 20px;
+}
+.sale-element-position {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 205px;
+}
+.sale-element-heart {
+  display: flex;
+  justify-content: end;
+
+  img {
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+}
+
+.sale-element-eye {
+  display: block;
+  position: absolute;
+}
+.sale-icon {
+  padding-top: 16px;
+  padding-right: 16px;
+  position: relative;
+}
+.sale-icon {
+  svg {
+    path:hover {
+      fill: #979797;
+    }
+  }
+  svg:first-child {
+    path:active {
+      fill: #e24b33;
+    }
+  }
+  svg:last-child {
+    position: absolute;
+    display: block;
+    top: 50px;
+  }
+}
+
+.sale-card:hover {
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
+  .select-style {
+    display: block;
+    visibility: visible;
+  }
+}

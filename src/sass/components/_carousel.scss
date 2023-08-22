@@ -1,0 +1,50 @@
+.carousel {
+  background-color: $bgColor;
+  background-image: url('../images/Union.png');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  margin-bottom: 120px;
+
+  .carousel-offer {
+    color: $primary;
+    font-family: 'Prata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .carousel-offer-big {
+    font-size: 50px;
+  }
+  .carousel-offer-paddings {
+    padding-top: 30px;
+    padding-bottom: 54px;
+  }
+  .carousel-btn {
+    font-weight: 500;
+    font-size: 14px;
+    @include typographyPrimary;
+    text-transform: uppercase;
+    background-color: $primary;
+    padding: 20px 56px;
+    color: $white;
+    border: none;
+  }
+  .carousel-btn-md {
+    display: none;
+  }
+  .carousel-btn:hover {
+    background-color: $primaryHover;
+  }
+  .carousel-btn:focus {
+    outline: none;
+    background-color: #000000;
+  }
+  .carousel-points {
+    text-align: center;
+  }
+  .carousel-arrow-center {
+    display: flex;
+    justify-content: center;
+  }
+}

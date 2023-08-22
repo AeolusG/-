@@ -1,0 +1,234 @@
+.daily {
+  .daily-icons {
+    gap: 4px;
+    padding-left: 16px;
+    position: absolute;
+    padding-top: 16px;
+  }
+  .daily-icon {
+    max-width: fit-content;
+  }
+  .daily-product {
+    margin-right: 50px;
+  }
+  .daily-subtitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .daily-product-description {
+    width: calc(100% / 2 - 50px);
+  }
+  .daily-star-padding {
+    padding-right: 10px;
+  }
+  .daily-rate {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #303030;
+  }
+  .daily-stars {
+    margin-bottom: 24px;
+  }
+  .daily-vendor {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    margin-bottom: 36px;
+    color: #8f8f8f;
+  }
+  .daily-price {
+    gap: 16px;
+    align-items: end;
+    padding-left: 12px;
+  }
+
+  .daily-price-element {
+    max-width: fit-content;
+    padding: 0%;
+  }
+  .daily-time {
+    background-color: #f8f8f8;
+    padding: 14px 12px;
+    justify-content: center;
+    align-items: center;
+    span {
+      max-width: fit-content;
+    }
+  }
+  .daily-time-hours {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 100%;
+    text-align: center;
+    color: #303030;
+    background-color: $white;
+    border: 1px solid #d0d0d0;
+    max-width: fit-content;
+    padding: 6px 16px;
+
+    .daily-time-hours-digit {
+      font-weight: 700;
+      font-size: 16px;
+      padding-top: 6px;
+      margin: 0;
+      margin-bottom: 2px;
+    }
+    .daily-time-hours-text {
+      margin: 0;
+    }
+  }
+  .daily-border {
+    border-top: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+  }
+  .daily-feature {
+    @include typographyPrimary;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+    max-width: fit-content;
+    border: none;
+    outline: none;
+  }
+
+  .daily-feature-margin {
+    margin-bottom: 16px;
+  }
+  .daily-measures {
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .daily-measure {
+    @include typographyPrimary;
+    text-transform: uppercase;
+    border: 1px solid #dadada;
+    background: none;
+    padding: 9px 11px;
+  }
+  .daily-measure:hover {
+    border: 1px solid $primary;
+  }
+  .daily-measure:focus {
+    background-color: $primary;
+    color: $white;
+  }
+  .daily-measure-active {
+    background-color: $primary;
+    color: $white;
+  }
+  .daily-measure-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .daily-size {
+    gap: 8px;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+  .daily-feature-bg {
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    max-width: fit-content;
+    padding: 3px 6px;
+    text-align: center;
+  }
+  .daily-color-buttons {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .daily-color-btn-border {
+    border: 1px solid #dadada;
+    padding: 4px;
+    max-width: fit-content;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .daily-color-btn-border:hover {
+    border: 1px solid $primary;
+    transition: 0.2s;
+  }
+  .daily-color-btn {
+    outline: none;
+    text-decoration: none;
+    border-radius: 50%;
+    padding: 12px;
+    max-width: fit-content;
+    border: none;
+  }
+  .active {
+    border: 1px solid $primary;
+  }
+  .daily-color-btn-grey {
+    background-color: #d9d9d9;
+  }
+  .daily-color-btn-gold {
+    background-color: #f1cb7e;
+  }
+  .daily-color-btn-orange {
+    background-color: #ea8c48;
+  }
+  .daily-color-btn-lightGreen {
+    background-color: #a7e492;
+  }
+  .daily-purchase-btns {
+    margin-bottom: 130px;
+  }
+  .daily-purchase-btn {
+    @include typographyPrimary;
+
+    padding-top: 21px;
+    padding-bottom: 21px;
+    outline: none;
+    color: $white;
+    background-color: $primary;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .daily-purchase-btn-click {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+  .daily-purchase-btn:hover {
+    background-color: $primaryHover;
+    color: $white;
+  }
+  .daily-purchase-btn:focus {
+    background-color: #000000;
+    color: $white;
+  }
+  .daily-purchase-items {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #303030;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    img {
+      max-width: fit-content;
+    }
+  }
+  .daily-purchase-margin {
+    margin-right: 40px;
+  }
+  .daily-purchase-btn:first-child {
+    margin-bottom: 10px;
+  }
+}

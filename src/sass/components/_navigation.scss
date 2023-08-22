@@ -1,0 +1,36 @@
+.navigationbar {
+  background-color: $bgColor;
+  padding: 25px 50px;
+  margin-bottom: 20px;
+  .navbar-element {
+    padding: 0;
+    a {
+      text-decoration: none;
+
+      @include typographyPrimary;
+      font-weight: 500;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    :hover {
+      opacity: 0.5;
+      transition: 0.5s;
+    }
+    :focus {
+      opacity: 0.5;
+    }
+  }
+  .navbar-pressed {
+    opacity: 0.5;
+  }
+
+  .navbar-search {
+    font-size: 14px;
+    line-height: 100%;
+    color: #a2a2a2;
+    margin-left: 140px;
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+}

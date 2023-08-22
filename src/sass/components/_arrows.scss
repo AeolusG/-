@@ -1,0 +1,51 @@
+.animatedArrow-left:active {
+  circle {
+    fill: #f5f5f5;
+  }
+
+  path {
+    transform: translateX(-9px);
+    animation: shrink 0.3s ease-in;
+  }
+  @keyframes shrink {
+    0% {
+      transform: translateX(0px);
+    }
+  }
+}
+.animatedArrow-left:hover {
+  circle {
+    fill: #f5f5f5;
+  }
+}
+.animatedArrow-right:active {
+  circle {
+    fill: #f5f5f5;
+  }
+
+  path {
+    transform: translateX(9px);
+    animation: shrink 0.3s ease-in;
+  }
+  @keyframes shrink {
+    0% {
+      transform: translateX(0px);
+    }
+  }
+}
+.animatedArrow-right:hover {
+  circle {
+    fill: #f5f5f5;
+  }
+}
+.arrow-disabled {
+  opacity: 0.5;
+}
+.arrows {
+  display: flex;
+  justify-content: space-around;
+}
+.arrows {
+  padding: 0;
+  text-align: end;
+}

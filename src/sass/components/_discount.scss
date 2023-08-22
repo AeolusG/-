@@ -1,0 +1,86 @@
+.discountRing {
+  background-color: #e24b33;
+  border-radius: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px !important;
+}
+
+.discount {
+  margin-bottom: 120px;
+  .discounts-cards {
+    justify-content: space-between;
+  }
+  .discount-card {
+    background-color: $bgColor;
+    background-position-y: bottom;
+    background-image: url('../images/Union3.png');
+    background-repeat: no-repeat;
+    width: calc(100% / 3 - 15px);
+    padding: 0;
+  }
+  .discount-card-overflow {
+    overflow: hidden;
+    align-items: center;
+  }
+  .discount-card-ring {
+    background-image: url('../images/gold.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-bracelet {
+    background-image: url('../images/silver.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-emerald {
+    background-image: url('../images/green.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    height: 100%;
+    background-position-y: bottom;
+  }
+  .discount-card-description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: $primary;
+    padding-top: 72px;
+    padding-left: 27px;
+    padding-bottom: 22px;
+  }
+  .discount-card-percentage {
+    color: $white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 160%;
+    padding: 0 26px;
+    max-width: fit-content;
+    margin-bottom: 48px;
+    .discount-card-small {
+      font-size: 24px;
+    }
+  }
+  .discount-card-percentage-gold {
+    background-color: $gold;
+  }
+  .discount-card-percentage-red {
+    background-color: $red;
+  }
+  .discount-card-percentage-green {
+    background-color: $green;
+  }
+}
