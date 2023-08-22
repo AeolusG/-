@@ -4,8 +4,6 @@
 
 
 
-Макет доступен по ссылке: https://vk.cc/clg1QO
-
 -BootStrap
 
 -HTML5
