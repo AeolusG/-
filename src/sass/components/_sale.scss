@@ -110,3 +110,53 @@
     visibility: visible;
   }
 }
+.sale-points {
+  margin-top: -10px;
+  text-align: center;
+  margin-bottom: 32px;
+
+  img {
+    margin-right: 8px;
+  }
+}
+.prevPrice {
+  @include typographyPrimary;
+
+  font-size: 14px;
+  text-decoration-line: line-through;
+  color: #8f8f8f;
+  padding: 0;
+}
+.newPrice {
+  @include typographyPrimary;
+  font-weight: 600;
+  font-size: 18px;
+}
+.dropdown-list-button {
+  @include typographyPrimary;
+  font-size: 14px;
+  justify-content: space-between;
+  padding: 9px 16px;
+  border: none;
+  align-items: center;
+  outline: none;
+  display: flex;
+  min-width: -webkit-fill-available;
+}
+.droppdown-list-card {
+  box-shadow: none !important;
+  width: 309px !important;
+  position: absolute;
+  inset: 0px auto auto 20px !important;
+  margin: 0px;
+}
+.select-style {
+  visibility: hidden;
+  display: none;
+}
+.select-style-margin {
+  margin-bottom: 8px;
+}
+.select-style-margin:last-child {
+  margin-bottom: 24px;
+}

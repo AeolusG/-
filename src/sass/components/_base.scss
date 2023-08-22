@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+.display {
+  display: none !important;
+}
+.wrapper {
+  width: $containerWidth;
+  margin: auto;
+  padding-top: 24px;
+}
+.icon {
+  border-radius: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px;
+  display: inline-block;
+}
+.icon-green {
+  background-color: $green;
+}
+.icon-gold {
+  background-color: $gold;
+}
+.icon-black {
+  background-color: #495159;
+}
+.subtitle {
+  @include typographySecondary;
+  font-size: 40px;
+}
+.subtitle-daily {
+  margin-bottom: 40px;
+}
+.hover:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.hover-icon:hover {
+  img:first-child {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}

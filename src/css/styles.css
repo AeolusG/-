@@ -10874,6 +10874,67 @@ textarea.form-control-lg {
   border-radius: var(--bs-tooltip-border-radius);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.display {
+  display: none !important;
+}
+
+.wrapper {
+  width: 1300px;
+  margin: auto;
+  padding-top: 24px;
+}
+
+.icon {
+  border-radius: 15px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  color: #ffffff;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.icon-green {
+  background-color: #43807f;
+}
+
+.icon-gold {
+  background-color: #e1a661;
+}
+
+.icon-black {
+  background-color: #495159;
+}
+
+.subtitle {
+  font-family: "Prata";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  font-size: 40px;
+}
+
+.subtitle-daily {
+  margin-bottom: 40px;
+}
+
+.hover:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.hover-icon:hover img:first-child {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -22150,6 +22211,74 @@ textarea.form-control-lg {
   visibility: visible;
 }
 
+.sale-points {
+  margin-top: -10px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.sale-points img {
+  margin-right: 8px;
+}
+
+.prevPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  font-size: 14px;
+  text-decoration-line: line-through;
+  color: #8f8f8f;
+  padding: 0;
+}
+
+.newPrice {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dropdown-list-button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  font-size: 14px;
+  justify-content: space-between;
+  padding: 9px 16px;
+  border: none;
+  align-items: center;
+  outline: none;
+  display: flex;
+  min-width: -webkit-fill-available;
+}
+
+.droppdown-list-card {
+  box-shadow: none !important;
+  width: 309px !important;
+  position: absolute;
+  inset: 0px auto auto 20px !important;
+  margin: 0px;
+}
+
+.select-style {
+  visibility: hidden;
+  display: none;
+}
+
+.select-style-margin {
+  margin-bottom: 8px;
+}
+
+.select-style-margin:last-child {
+  margin-bottom: 24px;
+}
+
 .discountRing {
   background-color: #e24b33;
   border-radius: 15px;
@@ -22476,174 +22605,6 @@ textarea.form-control-lg {
   margin-bottom: 10px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  width: 1300px;
-  margin: auto;
-  padding-top: 24px;
-}
-
-.subtitle {
-  font-family: "Prata";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  color: #303030;
-  font-size: 40px;
-}
-
-.subtitle-daily {
-  margin-bottom: 40px;
-}
-
-.hover:hover {
-  opacity: 0.5;
-  transition: 0.5s;
-}
-
-.hover-icon:hover img:first-child {
-  opacity: 0.5;
-  transition: 0.5s;
-}
-
-.animatedArrow-left:active circle {
-  fill: #f5f5f5;
-}
-.animatedArrow-left:active path {
-  transform: translateX(-9px);
-  animation: shrink 0.3s ease-in;
-}
-@keyframes shrink {
-  0% {
-    transform: translateX(0px);
-  }
-}
-
-.animatedArrow-left:hover circle {
-  fill: #f5f5f5;
-}
-
-.animatedArrow-right:active circle {
-  fill: #f5f5f5;
-}
-.animatedArrow-right:active path {
-  transform: translateX(9px);
-  animation: shrink 0.3s ease-in;
-}
-@keyframes shrink {
-  0% {
-    transform: translateX(0px);
-  }
-}
-
-.animatedArrow-right:hover circle {
-  fill: #f5f5f5;
-}
-
-.arrow-disabled {
-  opacity: 0.5;
-}
-
-.arrows {
-  padding: 0;
-  text-align: end;
-}
-
-.icon {
-  border-radius: 15px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 100%;
-  color: #ffffff;
-  padding: 4px 8px;
-  display: inline-block;
-}
-
-.icon-green {
-  background-color: #43807f;
-}
-
-.icon-gold {
-  background-color: #e1a661;
-}
-
-.icon-black {
-  background-color: #495159;
-}
-
-.select-style {
-  visibility: hidden;
-  display: none;
-}
-
-.select-style-margin {
-  margin-bottom: 8px;
-}
-
-.select-style-margin:last-child {
-  margin-bottom: 24px;
-}
-
-.droppdown-list-card {
-  box-shadow: none !important;
-  width: 309px !important;
-  position: absolute;
-  inset: 0px auto auto 20px !important;
-  margin: 0px;
-}
-
-.dropdown-list-button {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  color: #303030;
-  font-size: 14px;
-  justify-content: space-between;
-  padding: 9px 16px;
-  border: none;
-  align-items: center;
-  outline: none;
-  display: flex;
-  min-width: -webkit-fill-available;
-}
-
-.sale-points {
-  margin-top: -10px;
-  text-align: center;
-  margin-bottom: 32px;
-}
-.sale-points img {
-  margin-right: 8px;
-}
-
-.prevPrice {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  color: #303030;
-  font-size: 14px;
-  text-decoration-line: line-through;
-  color: #8f8f8f;
-  padding: 0;
-}
-
-.newPrice {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  color: #303030;
-  font-weight: 600;
-  font-size: 18px;
-}
-
 .article {
   margin-bottom: 40px;
 }
@@ -22687,19 +22648,6 @@ textarea.form-control-lg {
   line-height: 100%;
   color: #303030;
   margin: 0;
-}
-
-.tooltip {
-  --bs-tooltip-bg: white !important;
-  border: none !important;
-  border-radius: 0px !important;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1) !important;
-  font-size: 14px !important;
-  --bs-tooltip-color: $primary !important;
-}
-
-.display {
-  display: none !important;
 }
 
 @media (max-width: 575px) {
