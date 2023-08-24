@@ -7,6 +7,7 @@
  */
 @import '../fonts/fonts.css';
 @import '../fonts/fonts.css';
+@import '../fonts/fonts.css';
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -21907,6 +21908,26 @@ textarea.form-control-lg {
   margin-right: 9px;
 }
 
+.dropdown {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  font-size: 16px;
+  border: none;
+  background: url("../../images/dropdown.svg") no-repeat right;
+}
+
+select:focus,
+select:hover,
+option:hover,
+option:focus {
+  border: none;
+  outline: none;
+  border: transparent;
+}
+
 .dropdown-list {
   margin-top: 13px !important;
   border: none !important;
@@ -21938,6 +21959,12 @@ textarea.form-control-lg {
 }
 .dropdown-list .check {
   padding-left: 10px;
+}
+.dropdown-list .chosen-city {
+  padding-left: 10px;
+}
+.dropdown-list .not-chosen-city {
+  display: none;
 }
 
 .dropdown a:focus svg {

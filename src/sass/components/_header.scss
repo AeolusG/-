@@ -1,6 +1,7 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../../../node_modules/bootstrap/scss/tooltip';
 @import '../../../node_modules/bootstrap/scss/variables.scss';
+@import '../mixins';
 .header {
   @include typographyPrimary;
   font-size: 14px;
@@ -88,6 +89,21 @@
   margin-right: 9px;
 }
 
+.dropdown {
+  @include typographyPrimary;
+  font-size: 16px;
+  border: none;
+  background: url('../../images/dropdown.svg') no-repeat right;
+}
+select:focus,
+select:hover,
+option:hover,
+option:focus {
+  border: none;
+  outline: none;
+  border: transparent;
+}
+
 .dropdown-list {
   margin-top: 13px !important;
   border: none !important;
@@ -115,6 +131,12 @@
   }
   .check {
     padding-left: 10px;
+  }
+  .chosen-city {
+    padding-left: 10px;
+  }
+  .not-chosen-city {
+    display: none;
   }
 }
 .dropdown {

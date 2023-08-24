@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
 
     <link
@@ -28,8 +31,14 @@
           <div class="row header">
             <div class="col-lg-2 col-md-12 hover-icon iconCity">
               <img src="./images/gpsBlack.svg" alt="point" />
-              <div class="dropdown">
-                <a
+              <select name="city" id="1" class="dropdown">
+                <option value="moscow" class="dropdown-item">Москва</option>
+                <option value="spb">Санкт-Петербург</option>
+                <option value="rostov">Ростов</option>
+                <option value="rezh">Реж</option>
+              </select>
+
+              <!-- <a
                   type="button"
                   id="dropdownMenuButton1"
                   data-bs-toggle="dropdown"
@@ -49,29 +58,47 @@
                       stroke-width="2"
                     />
                   </svg>
-                </a>
+                </a> -->
 
-                <ul
+              <!-- <ul
                   class="dropdown-menu dropdown-list"
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li>
                     <a class="dropdown-item" href="#"
                       >Санкт-Петербург
-                      <img class="check" src="./images/check.svg" alt="" />
+                      <img
+                        class="chosen-city"
+                        src="./images/check.svg"
+                        alt=""
+                      />
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">Москва </a>
+                    <img
+                      class="not-chosen-city"
+                      src="./images/check.svg"
+                      alt=""
+                    />
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">Нижний Новгород </a>
+                    <img
+                      class="not-chosen-city"
+                      src="./images/check.svg"
+                      alt=""
+                    />
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">Ростов-на-Дону </a>
+                    <img
+                      class="not-chosen-city"
+                      src="./images/check.svg"
+                      alt=""
+                    />
                   </li>
-                </ul>
-              </div>
+                </ul> -->
             </div>
             <!-- ---------------- -->
 
@@ -1186,10 +1213,18 @@
 </html>
 
 <script>
-  const tooltipTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="tooltip"]'
-  );
-  const tooltipList = [...tooltipTriggerList].map(
-    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-  );
+  const dropDownItem = document.querySelectorAll('.dropdown-item');
+  console.log(dropDownItem);
+  dropDownItem.forEach((item) => {
+    item.addEventListener('click', function () {
+      const prevCity = document.querySelector('.chosen-city');
+      prevCity.classList.replace('chosen-city', 'not-chosen-city');
+      const cityName = document.querySelector('.city-name');
+      cityName.innerHTML = item.innerHTML;
+      item.nextElementSibling.classList.replace(
+        'not-chosen-city',
+        'chosen-city'
+      );
+    });
+  });
 </script>
