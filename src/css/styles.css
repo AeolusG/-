@@ -21916,16 +21916,6 @@ textarea.form-control-lg {
   color: #303030;
   font-size: 16px;
   border: none;
-  background: url("../../images/dropdown.svg") no-repeat right;
-}
-
-select:focus,
-select:hover,
-option:hover,
-option:focus {
-  border: none;
-  outline: none;
-  border: transparent;
 }
 
 .dropdown-list {
