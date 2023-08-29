@@ -30,65 +30,43 @@
         <div class="container-fluid">
           <div class="row header">
             <div class="col-lg-2 col-md-12 hover-icon iconCity">
-              <img src="./images/gpsBlack.svg" alt="point" />
+              <div class="dropdown">
+                <div class="dropdown-select">
+                  <img src="./images/gpsBlack.svg" alt="point" />
+                  <p class="city-name">Санкт-Петербург</p>
+                  <svg
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
+                      stroke="#303030"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
 
-              <a
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                href="#"
-              >
-                <p class="city-name">Санкт-Петербург</p>
-                <svg
-                  width="9"
-                  height="6"
-                  viewBox="0 0 9 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <ul
+                  class="dropdown-list-hidden dropdown-list"
+                  aria-labelledby="dropdownMenuButton1"
                 >
-                  <path
-                    d="M1 0.712158L4.23753 3.94969L7.47507 0.712158"
-                    stroke="#303030"
-                    stroke-width="2"
-                  />
-                </svg>
-              </a>
-
-              <ul
-                class="dropdown-menu dropdown-list"
-                aria-labelledby="dropdownMenuButton1"
-              >
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >Санкт-Петербург
-                    <img class="chosen-city" src="./images/check.svg" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Москва </a>
-                  <img
-                    class="not-chosen-city"
-                    src="./images/check.svg"
-                    alt=""
-                  />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Нижний Новгород </a>
-                  <img
-                    class="not-chosen-city"
-                    src="./images/check.svg"
-                    alt=""
-                  />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Ростов-на-Дону </a>
-                  <img
-                    class="not-chosen-city"
-                    src="./images/check.svg"
-                    alt=""
-                  />
-                </li>
-              </ul>
+                  <li>
+                    <a href="#">Санкт-Петербург </a>
+                  </li>
+                  <li>
+                    <a href="#">Москва </a>
+                  </li>
+                  <li>
+                    <a href="#">Нижний Новгород </a>
+                  </li>
+                  <li>
+                    <a href="#">Ростов-на-Дону </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <!-- ---------------- -->
 
@@ -193,81 +171,106 @@
       </header>
       <section class="container">
         <div class="row carousel">
-          <div class="col-lg-1 align-self-center carousel-arrow-center">
-            <svg
-              class="arrow-disabled"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="27"
-                cy="27"
-                r="26.5"
-                transform="matrix(-1 0 0 1 54 0)"
-                stroke="#303030"
-              />
-
-              <path
-                d="M18.6464 27.3536C18.4512 27.1583 18.4512 26.8417 18.6464 26.6464L21.8284 23.4645C22.0237 23.2692 22.3403 23.2692 22.5355 23.4645C22.7308 23.6597 22.7308 23.9763 22.5355 24.1716L19.7071 27L22.5355 29.8284C22.7308 30.0237 22.7308 30.3403 22.5355 30.5355C22.3403 30.7308 22.0237 30.7308 21.8284 30.5355L18.6464 27.3536ZM35 27.5L19 27.5L19 26.5L35 26.5L35 27.5Z"
-                fill="black"
-              />
-            </svg>
-            <svg
-              class="animatedArrow-right display"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
-              <path
-                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
-                fill="black"
-              />
-            </svg>
-          </div>
-
-          <div class="col-lg-5 carousel-offer align-self-center">
-            <p>Суперскидка до 60%</p>
-            <p class="carousel-offer-big carousel-offer-paddings">
-              НА БРИЛЛИАНТЫ
-            </p>
-
-            <button class="carousel-btn">Подробнее</button>
-          </div>
-          <div class="col-lg-5 align-self-center">
-            <img class="img" src="./images/pngegg 1.png" alt="ring" />
-          </div>
-          <button class="carousel-btn-md">Подробнее</button>
-          <div
-            class="col-lg-1 align-self-center carousel-arrow-center navigation"
+          <svg
+            class="arrow-disabled"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="animatedArrow-right"
-              width="54"
-              height="54"
-              viewBox="0 0 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="27" cy="27" r="26.5" stroke="#303030" />
-              <path
-                d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
-                fill="black"
-              />
-            </svg>
-          </div>
-          <div class="row justify-content-center">
-            <p class="col-4 carousel-points">
-              <img src="./images/Ellipse 2.png" alt="" />
-              <img src="./images/Ellipse 3.png" alt="" />
-              <img src="./images/Ellipse 3.png" alt="" />
-            </p>
-          </div>
+            <circle
+              cx="27"
+              cy="27"
+              r="26.5"
+              transform="matrix(-1 0 0 1 54 0)"
+              stroke="#303030"
+            />
+
+            <path
+              d="M18.6464 27.3536C18.4512 27.1583 18.4512 26.8417 18.6464 26.6464L21.8284 23.4645C22.0237 23.2692 22.3403 23.2692 22.5355 23.4645C22.7308 23.6597 22.7308 23.9763 22.5355 24.1716L19.7071 27L22.5355 29.8284C22.7308 30.0237 22.7308 30.3403 22.5355 30.5355C22.3403 30.7308 22.0237 30.7308 21.8284 30.5355L18.6464 27.3536ZM35 27.5L19 27.5L19 26.5L35 26.5L35 27.5Z"
+              fill="black"
+            />
+          </svg>
+          <svg
+            class="animatedArrow-right"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="27" cy="27" r="26.5" stroke="#303030" />
+            <path
+              d="M35.3536 27.3536C35.5488 27.1583 35.5488 26.8417 35.3536 26.6464L32.1716 23.4645C31.9763 23.2692 31.6597 23.2692 31.4645 23.4645C31.2692 23.6597 31.2692 23.9763 31.4645 24.1716L34.2929 27L31.4645 29.8284C31.2692 30.0237 31.2692 30.3403 31.4645 30.5355C31.6597 30.7308 31.9763 30.7308 32.1716 30.5355L35.3536 27.3536ZM19 27.5L35 27.5L35 26.5L19 26.5L19 27.5Z"
+              fill="black"
+            />
+          </svg>
+          <ul>
+            <li class="carousel-slide" data-active>
+              <div class="col-lg-5 carousel-offer align-self-center">
+                <p>Суперскидка до 60%</p>
+                <p class="carousel-offer-big carousel-offer-paddings">
+                  НА БРИЛЛИАНТЫ
+                </p>
+
+                <button class="carousel-btn">Подробнее</button>
+              </div>
+              <div class="carousel-ring">
+                <img class="img" src="./images/pngegg 1.png" alt="ring" />
+              </div>
+
+              <div class="carousel-slide-flow">
+                <p class="col-4 carousel-points">
+                  <img src="./images/Ellipse 2.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                </p>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="col-lg-5 carousel-offer align-self-center">
+                <p>Суперскидка до 60%</p>
+                <p class="carousel-offer-big carousel-offer-paddings">
+                  НА БРИЛЛИАНТЫ
+                </p>
+
+                <button class="carousel-btn">Подробнее</button>
+              </div>
+              <div class="carousel-ring">
+                <img class="img" src="./images/pngegg 1.png" alt="ring" />
+              </div>
+
+              <div class="carousel-slide-flow">
+                <p class="col-4 carousel-points">
+                  <img src="./images/Ellipse 2.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                </p>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="col-lg-5 carousel-offer align-self-center">
+                <p>Суперскидка до 60%</p>
+                <p class="carousel-offer-big carousel-offer-paddings">
+                  НА БРИЛЛИАНТЫ
+                </p>
+
+                <button class="carousel-btn">Подробнее</button>
+              </div>
+              <div class="carousel-ring">
+                <img class="img" src="./images/pngegg 1.png" alt="ring" />
+              </div>
+
+              <div class="carousel-slide-flow">
+                <p class="col-4 carousel-points">
+                  <img src="./images/Ellipse 2.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                  <img src="./images/Ellipse 3.png" alt="" />
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section>
@@ -1203,18 +1206,27 @@
 </html>
 
 <script>
-  const dropDownItem = document.querySelectorAll('.dropdown-item');
-  console.log(dropDownItem);
-  dropDownItem.forEach((item) => {
-    item.addEventListener('click', function () {
-      const prevCity = document.querySelector('.chosen-city');
-      prevCity.classList.replace('chosen-city', 'not-chosen-city');
-      const cityName = document.querySelector('.city-name');
-      cityName.innerHTML = item.innerHTML;
-      item.nextElementSibling.classList.replace(
-        'not-chosen-city',
-        'chosen-city'
-      );
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownSelect = dropdown.querySelector('.dropdown-select');
+  const cityName = dropdownSelect.querySelector('.city-name');
+  const dropdownList = dropdown.querySelector('.dropdown-list-hidden');
+  const options = dropdownList.querySelectorAll('li');
+
+  const img = document.createElement('img');
+  img.setAttribute('src', './images/check.svg');
+  img.setAttribute('alt', 'check');
+
+  const defaultCity = dropdownList.querySelector('li:first-child');
+  defaultCity.append(img);
+
+  dropdownSelect.addEventListener('click', () => {
+    dropdownList.classList.toggle('dropdown-list-hidden');
+    dropdownSelect.classList.toggle('dropdown-select-caret');
+  });
+  options.forEach((item) => {
+    item.addEventListener('click', () => {
+      item.append(img);
+      cityName.innerText = item.innerText;
     });
   });
 </script>

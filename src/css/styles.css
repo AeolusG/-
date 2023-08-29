@@ -21915,18 +21915,28 @@ textarea.form-control-lg {
   line-height: 100%;
   color: #303030;
   font-size: 16px;
-  border: none;
+}
+
+.dropdown-select {
+  display: inline-block;
+}
+.dropdown-select img {
+  padding-right: 10px;
 }
 
 .dropdown-list {
-  margin-top: 13px !important;
-  border: none !important;
-  border-radius: 0px !important;
-  outline: none !important;
-  padding: 10px 0px !important;
-  padding-bottom: 10px !important;
-  box-shadow: 0px 8px 20px rgba(255, 54, 54, 0.1) !important;
-  transform: translate(-33px, 16px) !important;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  color: #303030;
+  position: absolute;
+  list-style-type: none;
+  background-color: white;
+  padding: 0;
+  z-index: 1;
+  top: 40px;
+  min-width: 200px;
 }
 .dropdown-list li {
   font-family: "Inter";
@@ -21935,9 +21945,9 @@ textarea.form-control-lg {
   line-height: 100%;
   color: #303030;
   font-size: 14px;
-}
-.dropdown-list li a {
-  padding: 10px 50px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .dropdown-list li a:hover {
   opacity: 1;
@@ -21950,14 +21960,12 @@ textarea.form-control-lg {
 .dropdown-list .check {
   padding-left: 10px;
 }
-.dropdown-list .chosen-city {
-  padding-left: 10px;
-}
-.dropdown-list .not-chosen-city {
+
+.dropdown-list-hidden {
   display: none;
 }
 
-.dropdown a:focus svg {
+.dropdown-select-caret svg {
   transform: rotate(180deg);
 }
 
@@ -22000,13 +22008,6 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.carousel {
-  background-color: #f8f8f8;
-  background-image: url("../images/Union.png");
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  margin-bottom: 120px;
-}
 .carousel .carousel-offer {
   color: #303030;
   font-family: "Prata";
@@ -22014,6 +22015,11 @@ textarea.form-control-lg {
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
+  padding-left: 100px;
+  min-width: 50%;
+}
+.carousel .carousel-ring {
+  min-width: 50%;
 }
 .carousel .carousel-offer-big {
   font-size: 50px;
@@ -22048,10 +22054,154 @@ textarea.form-control-lg {
 }
 .carousel .carousel-points {
   text-align: center;
+  min-width: 100%;
 }
 .carousel .carousel-arrow-center {
   display: flex;
   justify-content: center;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  background-image: url(../images/Union.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.carousel-slide-flow {
+  flex-grow: 1;
+}
+
+.carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
 }
 
 .popular {
@@ -22665,509 +22815,6 @@ textarea.form-control-lg {
   line-height: 100%;
   color: #303030;
   margin: 0;
-}
-
-@media (max-width: 575px) {
-  .wrapper {
-    padding: 0px 20px;
-  }
-  .iconCity {
-    justify-content: center !important;
-    align-items: baseline !important;
-  }
-  .droppdown-list-card {
-    box-shadow: none !important;
-    width: 309px !important;
-    position: absolute !important;
-    inset: 0px auto auto 20px !important;
-    left: 40% !important;
-    margin: 0px;
-  }
-  .navbar-search-burger {
-    font-size: 14px;
-    line-height: 100%;
-    color: black;
-    display: flex;
-    gap: 17px;
-    align-items: center;
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-  .popular .popular-card-rings {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .wrapper {
-    width: 768px;
-    padding-top: 24px;
-    transform: translate(0px, 0px);
-  }
-  .droppdown-list-card {
-    box-shadow: none !important;
-    width: 309px !important;
-    position: absolute !important;
-    inset: 0px auto auto 20px !important;
-    left: 40% !important;
-    margin: 0px;
-  }
-  .navbar-search-burger {
-    font-size: 14px;
-    line-height: 100%;
-    color: black;
-    display: flex;
-    gap: 17px;
-    align-items: center;
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-  .iconCity {
-    justify-content: center !important;
-    align-items: baseline !important;
-  }
-  .header {
-    display: block;
-    margin: auto;
-  }
-  .header a {
-    text-decoration: none;
-    border: none;
-    border-radius: 0px;
-    color: #303030;
-    background-color: white;
-    margin-bottom: 20px;
-  }
-  .header a:active {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .header a:hover {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .header a:focus-visible {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .col-md-12 {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .col-md-12:nth-child(3) {
-    justify-content: center;
-    margin-bottom: 30px;
-    animation: show 2s;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-  .col-md-12:nth-child(n+3) {
-    justify-content: center;
-  }
-  .header-title {
-    font-size: 40px;
-  }
-  @keyframes show {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .header-bg {
-    color: #e1a661;
-    animation: show 2s;
-  }
-  .burger-menu {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .header .navigation {
-    display: none;
-  }
-  .header .col-lg-2:nth-child(n+3) {
-    display: none;
-  }
-  .sale {
-    text-align: center;
-  }
-  .sale .sale-cards {
-    justify-content: space-evenly;
-    margin-top: 30px;
-  }
-  .sale .sale-buttons {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .arrows {
-    display: flex;
-    justify-content: space-around;
-  }
-  .md-hidden {
-    display: none;
-  }
-  .discount .discounts-cards {
-    justify-content: center;
-  }
-  .discount .discount-card {
-    width: 500px;
-    margin-bottom: 30px;
-    background-size: contain;
-  }
-  .discount .discount-card .discount-card-emerald {
-    background-image: url(../images/green.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card .discount-card-bracelet {
-    background-image: url(../images/silver.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card .discount-card-ring {
-    background-image: url(../images/gold.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card-description {
-    text-align: center;
-    bottom: 41px;
-    padding-top: 40px;
-  }
-  .discount .discount-card-percentage {
-    margin-bottom: 0;
-    margin-left: 80px;
-  }
-  .carousel {
-    text-align: center;
-    background-image: none;
-  }
-  .carousel .carousel-btn {
-    display: none;
-  }
-  .carousel .carousel-btn-md {
-    display: block;
-    font-weight: 500;
-    font-size: 14px;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    color: #303030;
-    text-transform: uppercase;
-    background-color: #303030;
-    padding: 20px 56px;
-    color: #ffffff;
-    border: none;
-    border: none;
-    max-width: fit-content;
-    margin: auto;
-    margin-bottom: 15px;
-  }
-  .carousel .carousel-offer-paddings {
-    padding-bottom: 0;
-  }
-  .carousel-arrow-center {
-    margin-bottom: 15px;
-    margin-top: 15px !important;
-    display: flex !important;
-    justify-content: space-between !important;
-  }
-  .carousel-offer p {
-    margin-bottom: 30px;
-  }
-  .popular .popular-card-rings {
-    margin-bottom: 20px;
-  }
-  .daily .daily-product-description {
-    width: auto;
-  }
-  .daily .daily-purchase-btns {
-    align-items: flex-end;
-  }
-  .daily .daily-time {
-    padding: 10px 0px;
-  }
-  .article {
-    text-align: center;
-  }
-  .articles {
-    text-align: center;
-  }
-  .display {
-    display: block !important;
-  }
-  .navigation {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .wrapper {
-    width: 768px;
-    padding-top: 24px;
-    transform: translate(0px, 0px);
-  }
-  .navbar-search-burger {
-    font-size: 14px;
-    line-height: 100%;
-    color: black;
-    display: flex;
-    gap: 17px;
-    align-items: center;
-    margin-bottom: 30px;
-    justify-content: center;
-  }
-  .header {
-    display: block;
-    margin: auto;
-  }
-  .header .col-md-12 {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-  .header .col-md-12:nth-child(3) {
-    justify-content: center;
-    margin-bottom: 30px;
-    animation: show 2s;
-    margin-bottom: 50px;
-    margin-top: 50px;
-  }
-  .header .col-md-12:nth-child(n+3) {
-    justify-content: center;
-  }
-  .header .header-title {
-    font-size: 40px;
-  }
-  @keyframes show {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .header .header-bg {
-    color: #e1a661;
-    animation: show 2s;
-  }
-  .header a {
-    text-decoration: none;
-    border: none;
-    border-radius: 0px;
-    color: #303030;
-    background-color: white;
-    margin-bottom: 20px;
-  }
-  .header a:active {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .header a:hover {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .header a:focus-visible {
-    text-decoration: none;
-    color: #303030 !important;
-    background-color: #ffffff !important;
-  }
-  .droppdown-list-card {
-    box-shadow: none !important;
-    width: 309px !important;
-    position: absolute !important;
-    inset: 0px auto auto 20px !important;
-    left: 40% !important;
-    margin: 0px;
-  }
-  .burger-menu {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  .header .navigation {
-    display: none;
-  }
-  .header .col-lg-2:nth-child(n+3) {
-    display: none;
-  }
-  .sale {
-    text-align: center;
-  }
-  .sale .sale-cards {
-    justify-content: space-evenly;
-    margin-top: 30px;
-  }
-  .sale .sale-buttons {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .arrows {
-    display: flex;
-    justify-content: space-around;
-  }
-  .md-hidden {
-    display: none;
-  }
-  .discount .discounts-cards {
-    justify-content: center;
-  }
-  .discount .discount-card {
-    width: 500px;
-    margin-bottom: 30px;
-    background-size: contain;
-  }
-  .discount .discount-card .discount-card-emerald {
-    background-image: url(../images/green.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card .discount-card-bracelet {
-    background-image: url(../images/silver.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card .discount-card-ring {
-    background-image: url(../images/gold.png);
-    background-repeat: no-repeat;
-  }
-  .discount .discount-card-description {
-    text-align: center;
-    bottom: 41px;
-    padding-top: 40px;
-  }
-  .discount .discount-card-percentage {
-    margin-bottom: 0;
-    margin-left: 80px;
-  }
-  .carousel {
-    text-align: center;
-    background-image: none;
-  }
-  .carousel .carousel-btn {
-    display: none;
-  }
-  .carousel .carousel-btn-md {
-    display: block;
-    font-weight: 500;
-    font-size: 14px;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%;
-    color: #303030;
-    text-transform: uppercase;
-    background-color: #303030;
-    padding: 20px 56px;
-    color: #ffffff;
-    border: none;
-    border: none;
-    max-width: fit-content;
-    margin: auto;
-    margin-bottom: 15px;
-  }
-  .carousel .carousel-offer-paddings {
-    padding-bottom: 0;
-  }
-  .carousel-arrow-center {
-    margin-bottom: 15px;
-    margin-top: 15px !important;
-    display: flex !important;
-    justify-content: space-between !important;
-  }
-  .carousel-offer p {
-    margin-bottom: 30px;
-  }
-  .daily .daily-product-description {
-    width: auto;
-  }
-  .daily .daily-purchase-btns {
-    align-items: flex-end;
-  }
-  .popular .popular-card-rings {
-    margin-bottom: 20px;
-  }
-  .article {
-    text-align: center;
-  }
-  .articles {
-    text-align: center;
-  }
-  .display {
-    display: block !important;
-  }
-  .navigation {
-    display: none !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 13099x) {
-  .carousel {
-    justify-content: center;
-  }
-  .carousel .carousel-offer-big {
-    font-size: 35px;
-  }
-  .carousel .img {
-    width: 100%;
-  }
-  .navigationbar {
-    padding: 15px 25px;
-  }
-  .display {
-    display: none !important;
-  }
-  .sale .sale-cards {
-    gap: 0;
-    justify-content: space-between;
-  }
-  .lg-hidden {
-    display: none;
-  }
-  .popular .popular-cards {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .popular .popular-subtitle {
-    text-align: center;
-  }
-  .daily .daily-purchase-btns {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-  }
-  .daily .daily-measures {
-    width: max-content;
-  }
-  .daily .ring {
-    width: -webkit-fill-available;
-    width: 500px;
-  }
-  .daily .daily-time-hours {
-    max-width: none;
-    padding: 3px 10px !important;
-  }
-  .daily .daily-time {
-    padding: 10px 0px !important;
-  }
-  .popular .popular-card-rings {
-    margin-bottom: 20px;
-  }
-  .discount .discount-card-percentage {
-    margin-bottom: 10px;
-    margin-top: 50px;
-  }
-  .discount .discount-card-emerald {
-    background-position-y: top;
-  }
-  .discount .discount-card-bracelet {
-    background-position-x: 115px;
-  }
-  .discount .discount-card-description {
-    font-size: 15px;
-  }
-  .articles {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
