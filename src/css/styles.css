@@ -21908,7 +21908,7 @@ textarea.form-control-lg {
   margin-right: 9px;
 }
 
-.dropdown {
+.header__dropdown {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -21969,6 +21969,15 @@ textarea.form-control-lg {
   transform: rotate(180deg);
 }
 
+.sale__dropdown {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+}
+
 .navigationbar {
   background-color: #f8f8f8;
   padding: 25px 50px;
@@ -22021,7 +22030,7 @@ textarea.form-control-lg {
   -moz-box-sizing: border-box;
 }
 
-.container {
+.carousel__container {
   width: 900px;
   min-width: 900px;
   margin: 50px auto;
@@ -22142,7 +22151,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 .carousel__nav > label {
-  border: 1px solid #fff;
+  border: 1px solid #8f8f8f;
   display: inline-block;
   border-radius: 50%;
   cursor: pointer;

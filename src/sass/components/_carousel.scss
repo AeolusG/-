@@ -173,7 +173,7 @@
       z-index: 3;
 
       > label {
-        border: 1px solid #fff;
+        border: 1px solid #8f8f8f;
         display: inline-block;
         border-radius: 50%;
         cursor: pointer;
@@ -193,7 +193,7 @@
   -moz-box-sizing: border-box;
 }
 
-.container {
+.carousel__container {
   width: 900px;
   min-width: 900px;
   margin: 50px auto;
