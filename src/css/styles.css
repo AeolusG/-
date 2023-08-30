@@ -21934,7 +21934,7 @@ textarea.form-control-lg {
   list-style-type: none;
   background-color: white;
   padding: 0;
-  z-index: 1;
+  z-index: 2;
   top: 40px;
   min-width: 200px;
 }
@@ -21967,15 +21967,6 @@ textarea.form-control-lg {
 
 .dropdown-select-caret svg {
   transform: rotate(180deg);
-}
-
-.sale__dropdown {
-  position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
 }
 
 .navigationbar {
@@ -22451,8 +22442,44 @@ textarea.form-control-lg {
   margin-bottom: 8px;
 }
 
-.select-style-margin:last-child {
-  margin-bottom: 24px;
+.sale__dropdown1 {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+  left: 15.9%;
+}
+
+.sale__dropdown2 {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+  left: 33.25%;
+}
+
+.sale__dropdown3 {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+  right: 33.2%;
+}
+
+.sale__dropdown4 {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+  right: 15.85%;
 }
 
 .discountRing {

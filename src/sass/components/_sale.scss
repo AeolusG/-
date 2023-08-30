@@ -157,6 +157,27 @@
 .select-style-margin {
   margin-bottom: 8px;
 }
-.select-style-margin:last-child {
-  margin-bottom: 24px;
+@mixin sale-dropdown {
+  position: absolute;
+  background: white;
+  width: 310px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  padding: 10px;
+}
+.sale__dropdown1 {
+  @include sale-dropdown;
+  left: 15.9%;
+}
+.sale__dropdown2 {
+  @include sale-dropdown;
+  left: 33.25%;
+}
+.sale__dropdown3 {
+  @include sale-dropdown;
+  right: 33.2%;
+}
+.sale__dropdown4 {
+  @include sale-dropdown;
+  right: 15.85%;
 }

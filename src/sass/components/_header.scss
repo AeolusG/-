@@ -105,7 +105,7 @@
   list-style-type: none;
   background-color: white;
   padding: 0;
-  z-index: 1;
+  z-index: 2;
   top: 40px;
   min-width: 200px;
 
@@ -137,12 +137,4 @@
   svg {
     transform: rotate(180deg);
   }
-}
-.sale__dropdown {
-  position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
 }
