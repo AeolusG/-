@@ -1,192 +1,247 @@
-.carousel {
-  .carousel-offer {
-    color: $primary;
-    font-family: 'Prata';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    padding-left: 100px;
-    min-width: 50%;
-  }
-  .carousel-ring {
-    min-width: 50%;
-  }
-  .carousel-offer-big {
-    font-size: 50px;
-  }
-  .carousel-offer-paddings {
-    padding-top: 30px;
-    padding-bottom: 54px;
-  }
-  .carousel-btn {
-    font-weight: 500;
-    font-size: 14px;
-    @include typographyPrimary;
-    text-transform: uppercase;
-    background-color: $primary;
-    padding: 20px 56px;
-    color: $white;
-    border: none;
-  }
-  .carousel-btn-md {
-    display: none;
-  }
-  .carousel-btn:hover {
-    background-color: $primaryHover;
-  }
-  .carousel-btn:focus {
-    outline: none;
-    background-color: #000000;
-  }
-  .carousel-points {
-    text-align: center;
-    min-width: 100%;
-  }
-  .carousel-arrow-center {
-    display: flex;
-    justify-content: center;
-  }
-}
-.carousel-slide {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f8f8f8;
-  background-image: url(../images/Union.png);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
+%animation-default {
+  opacity: 1 !important;
+  z-index: 3;
 }
 
-.carousel-slide-flow {
-  flex-grow: 1;
+@mixin carousel($items, $animation: 'default') {
+  .carousel {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+
+    > input[type='radio'] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      top: 0;
+
+      &:checked {
+        ~ .carousel__items .carousel__item,
+        ~ .carousel__prev > label,
+        ~ .carousel__next > label {
+          opacity: 0;
+        }
+      }
+
+      @for $i from 1 through $items {
+        &:nth-child(#{$i}) {
+          &:checked {
+            ~ .carousel__items .carousel__item {
+              @if $animation == 'default' {
+                &:nth-child(#{$i}) {
+                  opacity: 1;
+                }
+              }
+            }
+
+            ~ .carousel__prev {
+              > label {
+                @if $i == 1 {
+                  &:nth-child(#{$items}) {
+                    @extend %animation-default;
+                  }
+                } @else if $i == $items {
+                  &:nth-child(#{$items - 1}) {
+                    @extend %animation-default;
+                  }
+                } @else {
+                  &:nth-child(#{$i - 1}) {
+                    @extend %animation-default;
+                  }
+                }
+              }
+            }
+
+            ~ .carousel__next {
+              > label {
+                @if $i == $items {
+                  &:nth-child(1) {
+                    @extend %animation-default;
+                  }
+                } @else {
+                  &:nth-child(#{$i + 1}) {
+                    @extend %animation-default;
+                  }
+                }
+              }
+            }
+
+            ~ .carousel__nav {
+              > label {
+                &:nth-child(#{$i}) {
+                  background: #ccc;
+                  cursor: default;
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__items {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      height: 600px;
+      position: relative;
+    }
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: opacity 2s;
+      -webkit-transition: opacity 2s;
+      display: flex;
+      background-color: $bgColor;
+      background-image: url(../images/Union.png);
+      background-repeat: no-repeat;
+      background-position-y: bottom;
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    &__prev,
+    &__next {
+      > label {
+        cursor: pointer;
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        opacity: 0;
+        z-index: 2;
+
+        &:hover,
+        &:focus {
+          opacity: 0.5 !important;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+
+    &__prev {
+      > label {
+        left: 2%;
+
+        &:before {
+          background-image: url(../images/arrowleft.svg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &__next {
+      > label {
+        right: 2%;
+
+        &:before {
+          background-image: url(../images/arrowright.svg);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      bottom: 3%;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      z-index: 3;
+
+      > label {
+        border: 1px solid #fff;
+        display: inline-block;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 0.125%;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
 
-.carousel {
-  margin-left: 15%;
-  margin-right: 15%;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-ul.slides {
-  display: block;
-  position: relative;
-  height: 600px;
-  margin: 0;
+.container {
+  width: 900px;
+  min-width: 900px;
+  margin: 50px auto;
   padding: 0;
-  overflow: hidden;
-  list-style: none;
 }
 
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
+@include carousel(3);
+
+.carousel-offer {
+  color: #303030;
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  padding-left: 100px;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  justify-content: space-between;
 }
 
-ul.slides input {
+.carousel-offer-big {
+  font-size: 50px;
+}
+.carousel-offer-paddings {
+  padding-top: 30px;
+  padding-bottom: 54px;
+}
+.carousel-btn {
+  font-weight: 500;
+  font-size: 14px;
+  @include typographyPrimary;
+  text-transform: uppercase;
+  background-color: $primary;
+  padding: 20px 56px;
+  color: $white;
+  border: none;
+}
+.carousel-btn-md {
   display: none;
 }
-
-.slide-container {
-  display: block;
+.carousel-btn:hover {
+  background-color: $primaryHover;
 }
-
-.slide-image {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.slide-image img {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  font-size: 100px;
-  line-height: 600px;
-  color: #fff;
-}
-
-.carousel-controls label {
-  display: none;
-  position: absolute;
-  padding: 0 20px;
-  opacity: 0;
-  transition: opacity 0.2s;
-  cursor: pointer;
-}
-
-.slide-image:hover + .carousel-controls label {
-  opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-  width: 49%;
-  text-align: left;
-  left: 0;
-}
-
-.carousel-controls .next-slide {
-  width: 49%;
-  text-align: right;
-  right: 0;
-}
-
-.carousel-dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  z-index: 999;
-  text-align: center;
-}
-
-.carousel-dots .carousel-dot {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.5;
-  margin: 10px;
-}
-
-input:checked + .slide-container .slide-image {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .carousel-controls label {
-  display: block;
-}
-
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-  opacity: 1;
-}
-
-input:checked + .slide-container .nav label {
-  display: block;
+.carousel-btn:focus {
+  outline: none;
+  background-color: #000000;
 }

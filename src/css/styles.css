@@ -22008,7 +22008,150 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.carousel .carousel-offer {
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(3) {
+  opacity: 1 !important;
+  z-index: 3;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.container {
+  width: 900px;
+  min-width: 900px;
+  margin: 50px auto;
+  padding: 0;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+.carousel > input[type=radio] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  top: 0;
+}
+.carousel > input[type=radio]:checked ~ .carousel__items .carousel__item,
+.carousel > input[type=radio]:checked ~ .carousel__prev > label,
+.carousel > input[type=radio]:checked ~ .carousel__next > label {
+  opacity: 0;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+  opacity: 1;
+}
+.carousel > input[type=radio]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel__items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.carousel__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  display: flex;
+  background-color: #f8f8f8;
+  background-image: url(../images/Union.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+.carousel__item img {
+  width: 100%;
+  vertical-align: middle;
+}
+.carousel__prev > label, .carousel__next > label {
+  cursor: pointer;
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+.carousel__prev > label:hover, .carousel__prev > label:focus, .carousel__next > label:hover, .carousel__next > label:focus {
+  opacity: 0.5 !important;
+}
+.carousel__prev > label:before, .carousel__prev > label:after, .carousel__next > label:before, .carousel__next > label:after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.carousel__prev > label {
+  left: 2%;
+}
+.carousel__prev > label:before {
+  background-image: url(../images/arrowleft.svg);
+  background-repeat: no-repeat;
+}
+.carousel__next > label {
+  right: 2%;
+}
+.carousel__next > label:before {
+  background-image: url(../images/arrowright.svg);
+  background-repeat: no-repeat;
+}
+.carousel__nav {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
+}
+.carousel__nav > label {
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 0.125%;
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-offer {
   color: #303030;
   font-family: "Prata";
   font-style: normal;
@@ -22017,18 +22160,23 @@ textarea.form-control-lg {
   line-height: 100%;
   padding-left: 100px;
   min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  justify-content: space-between;
 }
-.carousel .carousel-ring {
-  min-width: 50%;
-}
-.carousel .carousel-offer-big {
+
+.carousel-offer-big {
   font-size: 50px;
 }
-.carousel .carousel-offer-paddings {
+
+.carousel-offer-paddings {
   padding-top: 30px;
   padding-bottom: 54px;
 }
-.carousel .carousel-btn {
+
+.carousel-btn {
   font-weight: 500;
   font-size: 14px;
   font-family: "Inter";
@@ -22042,166 +22190,18 @@ textarea.form-control-lg {
   color: #ffffff;
   border: none;
 }
-.carousel .carousel-btn-md {
+
+.carousel-btn-md {
   display: none;
 }
-.carousel .carousel-btn:hover {
+
+.carousel-btn:hover {
   background-color: #505050;
 }
-.carousel .carousel-btn:focus {
+
+.carousel-btn:focus {
   outline: none;
   background-color: #000000;
-}
-.carousel .carousel-points {
-  text-align: center;
-  min-width: 100%;
-}
-.carousel .carousel-arrow-center {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-slide {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f8f8f8;
-  background-image: url(../images/Union.png);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-}
-
-.carousel-slide-flow {
-  flex-grow: 1;
-}
-
-.carousel {
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-ul.slides {
-  display: block;
-  position: relative;
-  height: 600px;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  list-style: none;
-}
-
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-ul.slides input {
-  display: none;
-}
-
-.slide-container {
-  display: block;
-}
-
-.slide-image {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.slide-image img {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
-}
-
-.carousel-controls {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  font-size: 100px;
-  line-height: 600px;
-  color: #fff;
-}
-
-.carousel-controls label {
-  display: none;
-  position: absolute;
-  padding: 0 20px;
-  opacity: 0;
-  transition: opacity 0.2s;
-  cursor: pointer;
-}
-
-.slide-image:hover + .carousel-controls label {
-  opacity: 0.5;
-}
-
-.carousel-controls label:hover {
-  opacity: 1;
-}
-
-.carousel-controls .prev-slide {
-  width: 49%;
-  text-align: left;
-  left: 0;
-}
-
-.carousel-controls .next-slide {
-  width: 49%;
-  text-align: right;
-  right: 0;
-}
-
-.carousel-dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-  z-index: 999;
-  text-align: center;
-}
-
-.carousel-dots .carousel-dot {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.5;
-  margin: 10px;
-}
-
-input:checked + .slide-container .slide-image {
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .carousel-controls label {
-  display: block;
-}
-
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-  opacity: 1;
-}
-
-input:checked + .slide-container .nav label {
-  display: block;
 }
 
 .popular {
