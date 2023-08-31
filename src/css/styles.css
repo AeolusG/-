@@ -22442,44 +22442,69 @@ textarea.form-control-lg {
   margin-bottom: 8px;
 }
 
-.sale__dropdown1 {
-  position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
-  left: 15.9%;
+.slider {
+  overflow: hidden;
 }
 
-.sale__dropdown2 {
-  position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
-  left: 33.25%;
+.checkBoxes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
-.sale__dropdown3 {
-  position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
-  right: 33.2%;
+.bar {
+  width: 8px;
+  height: 8px;
+  margin: 6px;
+  cursor: pointer;
+  border: solid #000000 1px;
+  border-radius: 50%;
+  transition: all 0.1s ease;
 }
 
-.sale__dropdown4 {
+.bar__active {
+  background-color: rgb(0, 0, 0);
+}
+
+.bar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+input[name=r] {
   position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
-  right: 15.85%;
+  visibility: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  transition: all 0.6s ease;
+  margin-bottom: -10px;
+  margin-top: 50px;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+  margin-left: -75%;
 }
 
 .discountRing {

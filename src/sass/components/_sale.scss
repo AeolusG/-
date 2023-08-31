@@ -32,11 +32,11 @@
     padding-left: 55px;
     padding-right: 55px;
   }
-  .active {
-    transition: none;
-    background-color: $primary;
-    color: $white;
-  }
+  // .active {
+  //   transition: none;
+  //   background-color: $primary;
+  //   color: $white;
+  // }
 
   .sale-cards {
     gap: 20px;
@@ -157,27 +157,66 @@
 .select-style-margin {
   margin-bottom: 8px;
 }
-@mixin sale-dropdown {
+
+.slider {
+  overflow: hidden;
+}
+
+.checkBoxes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.bar {
+  width: 8px;
+  height: 8px;
+  margin: 6px;
+  cursor: pointer;
+  border: solid #000000 1px;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}
+.bar__active {
+  background-color: rgb(0, 0, 0);
+}
+.bar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+input[name='r'] {
   position: absolute;
-  background: white;
-  width: 310px;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 10px;
+  visibility: hidden;
 }
-.sale__dropdown1 {
-  @include sale-dropdown;
-  left: 15.9%;
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
 }
-.sale__dropdown2 {
-  @include sale-dropdown;
-  left: 33.25%;
+
+.slide {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  transition: all 0.6s ease;
+  margin-bottom: -10px;
+  margin-top: 50px;
 }
-.sale__dropdown3 {
-  @include sale-dropdown;
-  right: 33.2%;
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
 }
-.sale__dropdown4 {
-  @include sale-dropdown;
-  right: 15.85%;
+
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+  margin-left: -75%;
 }
