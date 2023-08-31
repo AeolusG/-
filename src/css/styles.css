@@ -22304,8 +22304,7 @@ textarea.form-control-lg {
   padding-left: 55px;
   padding-right: 55px;
 }
-.sale .active {
-  transition: none;
+.sale .sale-btn-active {
   background-color: #303030;
   color: #ffffff;
 }

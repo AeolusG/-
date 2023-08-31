@@ -32,12 +32,11 @@
     padding-left: 55px;
     padding-right: 55px;
   }
-  // .active {
-  //   transition: none;
-  //   background-color: $primary;
-  //   color: $white;
-  // }
 
+  .sale-btn-active {
+    background-color: $primary;
+    color: $white;
+  }
   .sale-cards {
     gap: 20px;
   }

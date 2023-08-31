@@ -278,7 +278,7 @@
           <div class="col-lg-10 sale-buttons">
             <button
               type="button"
-              class="sale-btn active"
+              class="sale-btn sale-btn-active"
               data-bs-toggle="button"
             >
               Кольца
@@ -861,6 +861,7 @@
   }
   switchActiveElements('bar', 'bar__active');
   switchActiveElements('daily-measure', 'daily-measure-active');
+  switchActiveElements('sale-btn', 'sale-btn-active');
 
   var currentTime = new Date();
   var deadlineTime = currentTime.setHours(currentTime.getHours() + 12);
