@@ -22441,71 +22441,6 @@ textarea.form-control-lg {
   margin-bottom: 8px;
 }
 
-.slider {
-  overflow: hidden;
-}
-
-.checkBoxes {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.bar {
-  width: 8px;
-  height: 8px;
-  margin: 6px;
-  cursor: pointer;
-  border: solid #000000 1px;
-  border-radius: 50%;
-  transition: all 0.1s ease;
-}
-
-.bar__active {
-  background-color: rgb(0, 0, 0);
-}
-
-.bar:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-input[name=r] {
-  position: absolute;
-  visibility: hidden;
-}
-
-.slides {
-  width: 400%;
-  height: 100%;
-  display: flex;
-}
-
-.slide {
-  display: flex;
-  justify-content: center;
-  width: 25%;
-  transition: all 0.6s ease;
-  margin-bottom: -10px;
-  margin-top: 50px;
-}
-
-#r1:checked ~ .s1 {
-  margin-left: 0;
-}
-
-#r2:checked ~ .s1 {
-  margin-left: -25%;
-}
-
-#r3:checked ~ .s1 {
-  margin-left: -50%;
-}
-
-#r4:checked ~ .s1 {
-  margin-left: -75%;
-}
-
 .discountRing {
   background-color: #e24b33;
   border-radius: 15px;
@@ -22743,7 +22678,7 @@ input[name=r] {
   gap: 8px;
   margin-bottom: 30px;
 }
-.daily .daily-color-btn-border {
+.daily .daily__checker-border {
   border: 1px solid #dadada;
   padding: 4px;
   max-width: fit-content;
@@ -22752,11 +22687,11 @@ input[name=r] {
   justify-content: center;
   align-items: center;
 }
-.daily .daily-color-btn-border:hover {
+.daily .daily__checker-border:hover {
   border: 1px solid #303030;
   transition: 0.2s;
 }
-.daily .daily-color-btn {
+.daily .daily__checker {
   outline: none;
   text-decoration: none;
   border-radius: 50%;
@@ -22764,7 +22699,7 @@ input[name=r] {
   max-width: fit-content;
   border: none;
 }
-.daily .active {
+.daily .daily__checker--active {
   border: 1px solid #303030;
 }
 .daily .daily-color-btn-grey {

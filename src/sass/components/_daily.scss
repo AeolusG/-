@@ -144,7 +144,7 @@
     gap: 8px;
     margin-bottom: 30px;
   }
-  .daily-color-btn-border {
+  .daily__checker-border {
     border: 1px solid #dadada;
     padding: 4px;
     max-width: fit-content;
@@ -155,11 +155,11 @@
     align-items: center;
   }
 
-  .daily-color-btn-border:hover {
+  .daily__checker-border:hover {
     border: 1px solid $primary;
     transition: 0.2s;
   }
-  .daily-color-btn {
+  .daily__checker {
     outline: none;
     text-decoration: none;
     border-radius: 50%;
@@ -167,7 +167,7 @@
     max-width: fit-content;
     border: none;
   }
-  .active {
+  .daily__checker--active {
     border: 1px solid $primary;
   }
   .daily-color-btn-grey {
