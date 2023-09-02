@@ -96,7 +96,11 @@
     top: 50px;
   }
 }
-
+.sale__icon-chosen {
+  path {
+    fill: #e24b33;
+  }
+}
 .sale-card:hover {
   box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
   .select-style {
