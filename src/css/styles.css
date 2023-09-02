@@ -22341,10 +22341,6 @@ textarea.form-control-lg {
   display: flex;
   justify-content: end;
 }
-.sale-element-heart img {
-  padding-top: 16px;
-  padding-right: 16px;
-}
 
 .sale-element-eye {
   display: block;
@@ -22441,6 +22437,17 @@ textarea.form-control-lg {
   margin-bottom: 8px;
 }
 
+.sale__img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.sale__product {
+  transition: 0.5s;
+}
+
 .discountRing {
   background-color: #e24b33;
   border-radius: 15px;
@@ -22490,7 +22497,6 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position-x: right;
   height: 100%;
-  background-position-y: bottom;
 }
 .discount .discount-card-description {
   font-family: "Inter";

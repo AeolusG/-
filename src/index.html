@@ -9,7 +9,7 @@
       href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-
+    <script src="./assets/index.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -280,16 +280,32 @@
               type="button"
               class="sale-btn sale-btn-active"
               data-bs-toggle="button"
+              id="ring"
             >
               Кольца
             </button>
-            <button type="button" class="sale-btn" data-bs-toggle="button">
+            <button
+              type="button"
+              class="sale-btn"
+              data-bs-toggle="button"
+              id="earring"
+            >
               Серьги
             </button>
-            <button type="button" class="sale-btn" data-bs-toggle="button">
+            <button
+              type="button"
+              class="sale-btn"
+              data-bs-toggle="button"
+              id="bracelet"
+            >
               Браслеты
             </button>
-            <button type="button" class="sale-btn" data-bs-toggle="button">
+            <button
+              type="button"
+              class="sale-btn"
+              data-bs-toggle="button"
+              id="watch"
+            >
               Часы
             </button>
           </div>
@@ -328,9 +344,13 @@
                 </svg>
               </div>
             </div>
-            <img src="./images/ring1.png" alt="Изображение" class="img" />
+            <div class="sale__product">
+              <img
+                src="./images/ring1.png"
+                alt="Изображение"
+                class="sale__img"
+              />
 
-            <div>
               <div class="container">
                 <div class="row sale-price">
                   <div class="newPrice col-5">41 000 ₽</div>
@@ -340,7 +360,7 @@
                 </div>
 
                 <div class="row sale-description">
-                  Стильное кольцо из белого золота c бриллиантами
+                  Стильное кольцо из белого золота c бриллиантами.
                 </div>
               </div>
             </div>
@@ -377,16 +397,22 @@
                 </svg>
               </div>
             </div>
-            <img src="./images/ring2.png" alt="Изображение" class="img" />
+            <div class="sale__product">
+              <img
+                src="./images/ring2.png"
+                alt="Изображение"
+                class="sale__img"
+              />
 
-            <div>
-              <div class="container">
-                <div class="row sale-price">
-                  <div class="newPrice col-5">56 000 ₽</div>
-                </div>
+              <div>
+                <div class="container">
+                  <div class="row sale-price">
+                    <div class="newPrice col-5">56 000 ₽</div>
+                  </div>
 
-                <div class="row sale-description">
-                  Стильное кольцо из белого золота c бриллиантами
+                  <div class="row sale-description">
+                    Платина практически всегда чиста на 95 процентов.
+                  </div>
                 </div>
               </div>
             </div>
@@ -423,16 +449,21 @@
                 </svg>
               </div>
             </div>
-            <img src="./images/ring3.png" alt="Изображение" class="img" />
+            <div class="sale__product">
+              <img
+                src="./images/ring3.png"
+                alt="Изображение"
+                class="sale__img"
+              />
 
-            <div>
               <div class="container">
                 <div class="row sale-price">
                   <div class="newPrice col-5">37 500 ₽</div>
                 </div>
 
                 <div class="row sale-description">
-                  Стильное кольцо из белого золота c бриллиантами
+                  Серебро – бело-серый металл, очень мягкий и легко подверженный
+                  повреждениям, поэтому обычно он стоит недорого.
                 </div>
               </div>
             </div>
@@ -469,16 +500,21 @@
                 </svg>
               </div>
             </div>
-            <img src="./images/ring4.png" alt="Изображение" class="img" />
+            <div class="sale__product">
+              <img
+                src="./images/ring4.png"
+                alt="Изображение"
+                class="sale__img"
+              />
 
-            <div id="sale__ring">
               <div class="container">
                 <div class="row sale-price">
                   <div class="newPrice col-5">39 200 ₽</div>
                 </div>
 
                 <div class="row sale-description">
-                  Стильное кольцо из белого золота c бриллиантами
+                  Титан обладает естественным серым покрытием, но иногда его
+                  полируют до черного цвета.
                 </div>
               </div>
             </div>
@@ -727,60 +763,15 @@
   const options = dropdownList.querySelectorAll('li');
 
   const img = document.createElement('img');
-  img.setAttribute('src', './images/check.svg');
-  img.setAttribute('alt', 'check');
+  changeCity(img);
 
-  const defaultCity = dropdownList.querySelector('li:first-child');
-  defaultCity.append(img);
-
-  dropdownSelect.addEventListener('click', () => {
-    dropdownList.classList.toggle('dropdown-list-hidden');
-    dropdownSelect.classList.toggle('dropdown-select-caret');
-  });
-  options.forEach((item) => {
-    item.addEventListener('click', () => {
-      item.append(img);
-      cityName.innerText = item.innerText;
-    });
-  });
-
-  function switchActiveElements(classForItems, classForActive) {
-    const switchers = document.querySelectorAll(`.${classForItems}`);
-    switchers.forEach((item) => {
-      item.addEventListener('click', function () {
-        if (document.querySelector(`.${classForActive}`)) {
-          document
-            .querySelector(`.${classForActive}`)
-            .classList.remove(`${classForActive}`);
-        }
-        item.classList.add(`${classForActive}`);
-      });
-    });
-  }
   switchActiveElements('bar', 'bar__active');
   switchActiveElements('daily-measure', 'daily-measure-active');
   switchActiveElements('sale-btn', 'sale-btn-active');
   switchActiveElements('daily__checker-border', 'daily__checker--active');
 
-  var currentTime = new Date();
-  var deadlineTime = currentTime.setHours(currentTime.getHours() + 12);
-  var countdown = setInterval(function () {
-    var now = new Date().getTime();
-    var timeRemain = deadlineTime - now;
-    var hoursRemain = Math.floor(
-      (timeRemain % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    var minutesRemain = Math.floor(
-      (timeRemain % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    var secondsRemain = Math.floor((timeRemain % (1000 * 60)) / 1000);
+  const buttonsForSale = document.querySelectorAll('.sale-btn');
+  const productsForSale = document.querySelectorAll('.sale__product');
 
-    hoursRemain = hoursRemain < 10 ? '0' + hoursRemain : hoursRemain;
-    minutesRemain = minutesRemain < 10 ? '0' + minutesRemain : minutesRemain;
-    secondsRemain = secondsRemain < 10 ? '0' + secondsRemain : secondsRemain;
-
-    document.getElementById('hours').innerHTML = hoursRemain;
-    document.getElementById('minutes').innerHTML = minutesRemain;
-    document.getElementById('seconds').innerHTML = secondsRemain;
-  }, 1000);
+  switchButtonsForSale(buttonsForSale);
 </script>
