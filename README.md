@@ -10,6 +10,10 @@
  
 -CSS3
 
+- JavaScript
+
+Ссылка на github pages:
+https://aeolusg.github.io/jewelry-store-landing-/src/#
 
 Превью лендинга
 
