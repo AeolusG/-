@@ -13,4 +13,4 @@
 
 Превью лендинга
 
-![Image alt](https://github.com/AeolusG/Krayt-layout-test-task/blob/main/src/images/prev.png)
+![Image alt](https://github.com/AeolusG/jewelry-store-landing-/blob/main/src/images/prev.png)
